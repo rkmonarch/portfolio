@@ -1,7 +1,7 @@
 'use client';
 // import { useRef } from "react";
 // import { motion } from "framer-motion";
-import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope, FaHiking, FaTableTennis, FaFilm, FaEye, FaServer, FaRobot } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope, FaHiking, FaTableTennis, FaFilm, FaEye, FaServer, FaRobot, FaWifi } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 import { useState } from "react";
 // import Image from "next/image";
@@ -97,6 +97,12 @@ export default function Home() {
       desc: "Your personal AI-powered DeFi agent that lives as an NFT, managing complex DeFi strategies through natural language while securing assets in its own Token Bound Account.",
     },
     {
+      title: "TapPay",
+      link: "https://ethglobal.com/showcase/tappay-941om",
+      logo: <FaWifi className="w-10 h-10 text-[#34d399] bg-[#181c24] rounded-full p-2 mb-3" />,
+      desc: "A chain-agnostic mobile payment app using NFC cards for secure, seamless cross-chain transactions. Pay with your favorite token on any chain, anywhere. Powered by Chainlink CCIP and LayerZero for ultimate flexibility and security.",
+    },
+    {
       title: "SOON Docs",
       link: "https://docs.soo.network",
       logo: "/soon_logo.png",
@@ -110,19 +116,19 @@ export default function Home() {
     },
     {
       title: "Shuffles",
-      link: "https://shuffles.app",
+      link: "https://shuffles.xyz",
       logo: "/shuffles.jpg",
       desc: "Effortless mobile crypto trading and swapping.",
     },
     {
       title: "VeilPay",
-      link: "https://veilpay.xyz",
+      link: "https://www.veilpay.xyz/",
       logo: "/veilpay.webp",
       desc: "Privacy-first donation platform for any token.",
     },
     {
       title: "OnlyBlinks",
-      link: "https://onlyblinks.vercel.app",
+      link: "https://onlyblinks.com",
       logo: "/onlyblinks.jpg",
       desc: "Explore 200+ Solana blinks across DeFi, NFTs, and more.",
     },
