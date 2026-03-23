@@ -1,5 +1,6 @@
 import './globals.css';
 import React from 'react';
+import { Analytics } from '@vercel/analytics/next';
 import Nav from './components/NavBar';
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaMedium, FaTwitter } from 'react-icons/fa';
 
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   );
