@@ -5,14 +5,14 @@ const experience = [
   {
     company: 'SOON',
     role: 'DevRel Lead',
-    period: 'Current',
+    period: '2024–Current',
     link: 'https://twitter.com/soon_svm',
     color: '#7C3AED',
   },
   {
     company: 'Solana Labs',
     role: 'Solana Fellow',
-    period: '2023',
+    period: '2024',
     link: 'https://twitter.com/solana',
     color: '#059669',
   },
@@ -26,14 +26,14 @@ const experience = [
   {
     company: 'Fetcch',
     role: 'DevRel',
-    period: '2022–2023',
+    period: '2023–2024',
     link: 'https://twitter.com/FetcchX',
     color: '#DB2777',
   },
   {
     company: 'iCeipts Technologies',
     role: 'Software Engineer',
-    period: '2022',
+    period: '2021–2023',
     link: 'https://iceipts.com',
     color: '#D97706',
   },
