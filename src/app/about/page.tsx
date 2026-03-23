@@ -53,7 +53,7 @@ export default function AboutPage() {
                 rel="noopener noreferrer"
                 className="text-[#7C3AED] hover:underline underline-offset-4 font-medium"
               >
-                SOON
+                SOON SVM
               </a>
               , where I host weekly Discord office hours, help developers navigate the ecosystem,
               and build resources that make blockchain development less painful.
@@ -135,7 +135,7 @@ export default function AboutPage() {
           </div>
           <div className="space-y-1 pl-1">
             <p className="text-sm font-semibold text-[#0d0d1a]">Rahul Kulkarni</p>
-            <p className="text-xs text-[#5c5c78]">DevRel Lead @ SOON</p>
+            <p className="text-xs text-[#5c5c78]">DevRel Lead @ SOON SVM</p>
             <p className="text-xs text-[#9898b0]">Solana · Web3 · DeFi</p>
           </div>
         </div>

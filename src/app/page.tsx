@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const experience = [
   {
-    company: 'SOON',
+    company: 'SOON SVM',
     role: 'DevRel Lead',
     period: '2024–Current',
     link: 'https://twitter.com/soon_svm',
@@ -77,7 +77,7 @@ export default function Home() {
           <div className="fade-up delay-1 mb-8">
             <span className="inline-flex items-center gap-2 text-xs font-mono bg-[#7C3AED]/10 text-[#7C3AED] px-3 py-1.5 rounded-full border border-[#7C3AED]/20 font-medium">
               <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] pulse-dot" />
-              DevRel Lead @ SOON
+              DevRel Lead @ SOON SVM
             </span>
           </div>
 
