@@ -19,7 +19,7 @@ const experience = [
   {
     company: 'Shuffles',
     role: 'Founder',
-    period: '2023',
+    period: '2024',
     link: 'https://twitter.com/shuffles_xyz',
     color: '#0284C7',
   },
