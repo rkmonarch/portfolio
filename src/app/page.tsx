@@ -1,68 +1,206 @@
-// app/page.tsx
-import React, { JSX } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
-export default function Home(): JSX.Element {
+const experience = [
+  {
+    company: 'SOON',
+    role: 'DevRel Lead',
+    period: 'Current',
+    link: 'https://twitter.com/soon_svm',
+    color: '#7C3AED',
+  },
+  {
+    company: 'Solana Labs',
+    role: 'Solana Fellow',
+    period: '2023',
+    link: 'https://twitter.com/solana',
+    color: '#059669',
+  },
+  {
+    company: 'Shuffles',
+    role: 'Founder',
+    period: '2023',
+    link: 'https://twitter.com/shuffles_xyz',
+    color: '#0284C7',
+  },
+  {
+    company: 'Fetcch',
+    role: 'DevRel',
+    period: '2022–2023',
+    link: 'https://twitter.com/FetcchX',
+    color: '#DB2777',
+  },
+  {
+    company: 'iCeipts Technologies',
+    role: 'Software Engineer',
+    period: '2022',
+    link: 'https://iceipts.com',
+    color: '#D97706',
+  },
+];
+
+const featured = [
+  {
+    title: 'HashPot',
+    link: 'https://hashpot.fun',
+    desc: 'Bitcoin block hash prediction game — guess the last 3 hex chars to win the pot.',
+  },
+  {
+    title: 'Leo',
+    link: 'https://leo-lemon.vercel.app',
+    desc: 'No-code Solana AI agent factory. Describe once, deploy in under 2 minutes.',
+  },
+  {
+    title: 'Shuffles',
+    link: 'https://shuffles.xyz',
+    desc: 'Mobile crypto trading and swapping across 7+ networks.',
+  },
+];
+
+export default function Home() {
   return (
-<section className="min-h-[60vh] flex flex-col justify-start pt-4">
-  {/* almost flush left-aligned */}
-  <div className="w-full text-left px-2 md:px-4 lg:px-6">
-    <h1 className="text-4xl font-bold mb-3">Hey, I&apos;m Rahul Kulkarni.</h1>
+    <div>
+      {/* Hero */}
+      <section className="relative max-w-5xl mx-auto px-6 pt-20 pb-28 overflow-hidden">
+        {/* Decorative blobs */}
+        <div
+          className="absolute top-0 right-0 w-[480px] h-[480px] rounded-full pointer-events-none -z-10"
+          style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%)' }}
+        />
+        <div
+          className="absolute bottom-10 left-10 w-[320px] h-[320px] rounded-full pointer-events-none -z-10"
+          style={{ background: 'radial-gradient(circle, rgba(5,150,105,0.06) 0%, transparent 70%)' }}
+        />
 
-    <h2 className="text-[1.1rem] font-semibold mb-3 text-gray-200">
-      Builder, explorer, and a little bit of a tech optimist.
-    </h2>
+        <div className="relative">
+          {/* Badge */}
+          <div className="fade-up delay-1 mb-8">
+            <span className="inline-flex items-center gap-2 text-xs font-mono bg-[#7C3AED]/10 text-[#7C3AED] px-3 py-1.5 rounded-full border border-[#7C3AED]/20 font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] pulse-dot" />
+              DevRel Lead @ SOON
+            </span>
+          </div>
 
-    <p className="text-[1.05rem] text-gray-400 leading-relaxed mb-8">
-      I’m a developer who loves building clean, reliable systems that just work. I spend most of my time experimenting with new ways to make web3 more usable and accessible by building cool stuff on Solana and helping others do the same. I care deeply about good developer experience, scalable infra, and products that feel simple but are technically powerful under the hood. When I’m not deep in code, you’ll probably find me watching movies, exploring new tech, or hunting for a good trail to hike.
-    </p>
+          {/* Name */}
+          <h1 className="fade-up delay-2 text-[clamp(52px,10vw,96px)] font-bold tracking-tight leading-[0.92] mb-6 text-[#0d0d1a]">
+            Rahul<br />
+            Kulkarni<span className="text-[#7C3AED]">.</span>
+          </h1>
 
-    {/* Highlights & Achievements — one liners */}
-    <div className="space-y-2 text-gray-400 text-[1.05rem] leading-relaxed">
-      <p>
-        Currently leading Developer Relations at{' '}
-        <Link href="https://twitter.com/soon_svm" target="_blank" rel="noopener noreferrer" className="text-[#00FFD1] font-semibold underline underline-offset-4 hover:text-[#00FFE5]">
-          SOON
-        </Link>
-      </p>
-      <p>
-        Previously Solana Fellow at{' '}
-        <Link href="https://twitter.com/solana" target="_blank" rel="noopener noreferrer" className="text-[#14F195] font-semibold underline hover:underline underline-offset-4">
-          Solana Labs
-        </Link>
-      </p>
-      <p>
-        Founded{' '}
-        <Link href="https://twitter.com/shuffles_xyz" target="_blank" rel="noopener noreferrer" className="text-[#5EEAD4] font-semibold underline hover:underline underline-offset-4">
-          Shuffles
-        </Link>{' '}
-        mobile crypto trading across 7+ networks
-      </p>
-      <p>
-        Handled DevRel at{' '}
-        <Link href="https://twitter.com/FetcchX" target="_blank" rel="noopener noreferrer" className="text-[#A78BFA] font-semibold underline hover:underline underline-offset-4">
-          Fetcch
-        </Link>{' '}
-        built wallets, points tools, and DeFi systems
-      </p>
-      <p>
-        Built CRM and ERP systems at{' '}
-        <Link href="https://iceipts.com" target="_blank" rel="noopener noreferrer" className="text-[#93C5FD] font-semibold underline hover:underline underline-offset-4">
-          iCeipts Technologies
-        </Link>
-      </p>
-      <p>
-        Member of{' '}
-        <Link href="https://twitter.com/superteam" target="_blank" rel="noopener noreferrer" className="text-[#FFDD57] font-semibold underline hover:underline underline-offset-4">
-          Superteam
-        </Link>{' '}
-        helping builders in the Solana ecosystem
-      </p>
+          {/* Tagline */}
+          <p className="fade-up delay-3 text-lg md:text-xl text-[#5c5c78] max-w-lg mb-4 leading-relaxed">
+            Builder, explorer, and a little bit of a tech optimist.
+          </p>
+
+          {/* Bio */}
+          <p className="fade-up delay-4 text-[#9898b0] text-base max-w-md mb-10 leading-relaxed">
+            Building at the edge of web3 and developer experience.
+            Making Solana more accessible, one dev at a time.
+          </p>
+
+          {/* CTAs */}
+          <div className="fade-up delay-5 flex flex-wrap gap-3">
+            <Link
+              href="/projects"
+              className="bg-[#7C3AED] text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-[#6D28D9] transition-colors shadow-sm"
+            >
+              View Projects →
+            </Link>
+            <Link
+              href="/about"
+              className="text-sm font-medium text-[#5c5c78] px-5 py-2.5 rounded-lg border border-black/10 hover:border-black/20 hover:text-[#0d0d1a] hover:bg-black/[0.03] transition-colors"
+            >
+              About Me
+            </Link>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-[#5c5c78] px-5 py-2.5 rounded-lg border border-black/10 hover:border-black/20 hover:text-[#0d0d1a] hover:bg-black/[0.03] transition-colors"
+            >
+              Resume ↗
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience */}
+      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-black/[0.06]">
+        <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] mb-8 font-semibold">
+          Experience
+        </p>
+        <div className="divide-y divide-black/[0.04]">
+          {experience.map((exp) => (
+            <a
+              key={exp.company}
+              href={exp.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between py-4 -mx-3 px-3 rounded-lg hover:bg-black/[0.03] transition-colors"
+            >
+              <div className="flex items-center gap-4">
+                <span
+                  className="w-2 h-2 rounded-full flex-shrink-0"
+                  style={{ background: exp.color }}
+                />
+                <div>
+                  <span className="font-medium text-[#0d0d1a] group-hover:text-[#7C3AED] transition-colors">
+                    {exp.company}
+                  </span>
+                  <span className="text-[#9898b0] mx-2">·</span>
+                  <span className="text-[#5c5c78] text-sm">{exp.role}</span>
+                </div>
+              </div>
+              <span className="text-xs text-[#9898b0] font-mono tabular-nums">{exp.period}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {/* Selected Work — editorial list */}
+      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-black/[0.06]">
+        <div className="flex items-baseline justify-between mb-2">
+          <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] font-semibold">
+            Selected Work
+          </p>
+          <Link
+            href="/projects"
+            className="text-xs text-[#9898b0] hover:text-[#5c5c78] transition-colors"
+          >
+            View all →
+          </Link>
+        </div>
+
+        <div className="mt-6">
+          {featured.map((project, i) => (
+            <a
+              key={project.title}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-5 py-5 border-b border-black/[0.05] last:border-0 hover:translate-x-1.5 transition-transform duration-200"
+            >
+              <span className="text-xs font-mono text-[#9898b0] w-5 flex-shrink-0 group-hover:text-[#7C3AED] transition-colors">
+                0{i + 1}
+              </span>
+              <div className="flex-1 min-w-0 flex flex-col sm:flex-row sm:items-center sm:gap-4">
+                <span className="font-semibold text-[#0d0d1a] group-hover:text-[#7C3AED] transition-colors whitespace-nowrap">
+                  {project.title}
+                </span>
+                <span className="hidden sm:block text-[#d4d4e0] text-xs flex-1 overflow-hidden">
+                  {'·'.repeat(80)}
+                </span>
+                <span className="text-sm text-[#9898b0] sm:text-right mt-0.5 sm:mt-0 truncate max-w-xs">
+                  {project.desc}
+                </span>
+              </div>
+              <span className="text-[#9898b0] group-hover:text-[#7C3AED] transition-colors flex-shrink-0 text-sm">
+                ↗
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
     </div>
-  </div>
-</section>
-
-
-
   );
 }

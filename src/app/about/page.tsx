@@ -1,47 +1,142 @@
 'use client';
 import React from 'react';
-import { FaHiking, FaFilm, FaLaptopCode, FaEnvelope, FaTwitter, FaUsers, FaUtensils, FaFootballBall } from 'react-icons/fa';
+import { FaEnvelope, FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
+
+const interests = [
+  { icon: '💻', label: 'Web3 & Solana' },
+  { icon: '✈️', label: 'Traveling & Hiking' },
+  { icon: '🏏', label: 'Cricket' },
+  { icon: '🎬', label: 'Movies & TV' },
+  { icon: '📚', label: 'Reading' },
+  { icon: '👨‍👩‍👧‍👦', label: 'Family & Friends' },
+  { icon: '🍳', label: 'Cooking' },
+];
+
+const currentlyReading = [
+  { title: 'The Island of Sea Women', author: 'Lisa See' },
+  { title: 'The Night Circus', author: 'Erin Morgenstern' },
+];
+
+const socials = [
+  { href: 'mailto:rkweb3.00@gmail.com', Icon: FaEnvelope, label: 'Email' },
+  { href: 'https://twitter.com/0xrahul', Icon: FaTwitter, label: 'Twitter' },
+  { href: 'https://github.com/rkmonarch', Icon: FaGithub, label: 'GitHub' },
+  { href: 'https://linkedin.com/in/0xrahul', Icon: FaLinkedin, label: 'LinkedIn' },
+];
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen text-white font-sans py-16 px-6 sm:px-16">
-      <h1 className="text-5xl font-bold mb-12 text-left">About Me</h1>
+    <main className="max-w-5xl mx-auto px-6 py-16">
+      {/* Header */}
+      <div className="mb-14">
+        <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] mb-4 font-semibold">About</p>
+        <h1 className="text-4xl md:text-5xl font-bold text-[#0d0d1a] tracking-tight">
+          Rahul Kulkarni
+        </h1>
+      </div>
 
-      <div className="flex flex-col sm:flex-row gap-12 items-start">
-        {/* Avatar and Links */}
-        <div className="flex flex-col items-center flex-shrink-0">
-          <img
-            src="/rk.jpg"
-            alt="Rahul Kulkarni"
-            className="w-48 h-48 rounded-full object-cover border-2 border-gray-700 mb-6"
-          />
-          <h2 className="text-2xl font-bold mb-3">Rahul Kulkarni</h2>
-          <div className="flex gap-4">
-            <a href="mailto:rkweb3.00@gmail.com" className="text-gray-400 hover:text-[#00FFD1] text-2xl">
-              <FaEnvelope />
-            </a>
-            <a href="https://twitter.com/0xrahul" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#00FFD1] text-2xl">
-              <FaTwitter />
-            </a>
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_240px] gap-16 items-start">
+        {/* Left */}
+        <div className="space-y-12">
+
+          {/* Bio */}
+          <div className="space-y-4 text-[#5c5c78] text-base leading-relaxed">
+            <p>
+              Hey! I&apos;m Rahul. I love building cool things in web3, exploring new countries
+              and cultures, and spending time with family and friends.
+            </p>
+            <p>
+              I&apos;m currently leading Developer Relations at{' '}
+              <a
+                href="https://twitter.com/soon_svm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#7C3AED] hover:underline underline-offset-4 font-medium"
+              >
+                SOON
+              </a>
+              , where I host weekly Discord office hours, help developers navigate the ecosystem,
+              and build resources that make blockchain development less painful.
+            </p>
+            <p>
+              When I&apos;m not deep in code, I&apos;m reading, watching thriller or horror movies,
+              or exploring a new trail. Timothée Chalamet is my favorite actor. My favorite films
+              are <strong className="text-[#0d0d1a] font-medium">Dune</strong> and{' '}
+              <strong className="text-[#0d0d1a] font-medium">Grown Ups</strong>, and my favorite
+              shows are <strong className="text-[#0d0d1a] font-medium">Dark</strong> and{' '}
+              <strong className="text-[#0d0d1a] font-medium">The Vampire Diaries</strong>.
+            </p>
           </div>
+
+          {/* Interests — no boxes, just clean inline chips */}
+          <div>
+            <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] mb-5 font-semibold">
+              Interests
+            </p>
+            <div className="flex flex-wrap gap-x-6 gap-y-3">
+              {interests.map(({ icon, label }) => (
+                <span key={label} className="flex items-center gap-2 text-[#5c5c78]">
+                  <span className="text-base">{icon}</span>
+                  <span className="text-sm">{label}</span>
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Currently Reading */}
+          <div>
+            <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] mb-5 font-semibold">
+              Currently Reading
+            </p>
+            <div className="space-y-4">
+              {currentlyReading.map(({ title, author }) => (
+                <div key={title} className="flex items-start gap-3">
+                  <span className="text-lg mt-0.5 leading-none">📖</span>
+                  <div>
+                    <p className="text-sm font-medium text-[#0d0d1a]">{title}</p>
+                    <p className="text-xs text-[#9898b0] mt-0.5">{author}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Connect — plain text links, no boxes */}
+          <div>
+            <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] mb-5 font-semibold">
+              Connect
+            </p>
+            <div className="flex flex-wrap gap-6">
+              {socials.map(({ href, Icon, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-sm text-[#5c5c78] hover:text-[#7C3AED] transition-colors"
+                >
+                  <Icon size={13} />
+                  {label}
+                </a>
+              ))}
+            </div>
+          </div>
+
         </div>
 
-        {/* Bio and Interests */}
-        <div className="flex-1 flex flex-col gap-6">
-          <p className="text-gray-300 text-base leading-relaxed">
-            Hey! I’m Rahul. I love building cool things in web3, exploring new countries and cultures, and spending time with family and friends. I enjoy playing cricket, watching thriller and horror movies, and yes, Timothée Chalamet is my favorite actor.  
-            I also host weekly Discord office hours where we chat about tech, cook, and share ideas at SOON Labs. I like keeping things simple, learning constantly, and helping our community understand tech better through my posts and tweets.  
-            My favorite movies are <strong>Dune</strong> and <strong>Grown Ups</strong>, my favorite TV shows are <strong>Dark</strong> and <strong>The Vampire Diaries</strong> (big fan of Klaus!).
-          </p>
-
-          {/* Skills & Hobbies */}
-          <div className="flex flex-col gap-3 text-gray-400">
-            <span className="flex items-center gap-2"><FaLaptopCode /> Web3 & Solana</span>
-            <span className="flex items-center gap-2"><FaHiking /> Traveling & Hiking</span>
-            <span className="flex items-center gap-2"><FaFootballBall /> Cricket</span>
-            <span className="flex items-center gap-2"><FaFilm /> Movies & TV</span>
-            <span className="flex items-center gap-2"><FaUsers /> Family & Friends</span>
-            <span className="flex items-center gap-2"><FaUtensils /> Cooking</span>
+        {/* Right: Photo */}
+        <div className="flex flex-col gap-4">
+          <div className="w-full rounded-2xl overflow-hidden border border-black/[0.07] shadow-sm">
+            <img
+              src="/rk.jpg"
+              alt="Rahul Kulkarni"
+              className="w-full aspect-square object-cover"
+            />
+          </div>
+          <div className="space-y-1 pl-1">
+            <p className="text-sm font-semibold text-[#0d0d1a]">Rahul Kulkarni</p>
+            <p className="text-xs text-[#5c5c78]">DevRel Lead @ SOON</p>
+            <p className="text-xs text-[#9898b0]">Solana · Web3 · DeFi</p>
           </div>
         </div>
       </div>
