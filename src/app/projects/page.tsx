@@ -63,6 +63,12 @@ const projects: Project[] = [
     desc: 'React Native SDK with custom parsers & decoders for Solana Blinks.',
     tags: ['React Native', 'SDK', 'Solana'],
   },
+  {
+    title: 'Greg OWS',
+    link: 'https://github.com/rkmonarch/greg-ows',
+    desc: 'AI-powered Jupiter Lend trading agent on Solana using Open Wallet Standard (OWS) for secure local key signing.',
+    tags: ['AI Agents', 'Solana', 'DeFi'],
+  },
 ];
 
 export default function ProjectsPage() {
