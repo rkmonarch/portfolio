@@ -28,10 +28,10 @@ const projects: Project[] = [
     tags: ['Mobile', 'DeFi', 'Solana'],
   },
   {
-    title: 'SOON Staking Script',
-    link: 'https://github.com/rkmonarch/SOON-staking-script',
-    desc: 'Automate SOON token staking to receive gSOON LST on BSC.',
-    tags: ['Solana', 'Staking', 'Script'],
+    title: 'OWS React Native',
+    link: 'https://github.com/rkmonarch/ows-react-native',
+    desc: 'React Native library for policy-gated autonomous payments on Solana using Open Wallet Standard (OWS) with HTTP 402 support.',
+    tags: ['React Native', 'Solana', 'OWS'],
   },
   {
     title: 'Lucy',
