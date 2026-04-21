@@ -1,5 +1,5 @@
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
 
 interface Project {
   title: string;
@@ -10,64 +10,70 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'HashPot',
-    link: 'https://hashpot.fun',
-    desc: 'Bitcoin block hash prediction game. Guess the last 3 hex chars of the next block to win the shared pot.',
-    tags: ['Bitcoin', 'Game', 'Prediction'],
+    title: "HashPot",
+    link: "https://hashpot.fun",
+    desc: "Bitcoin block hash prediction game. Guess the last 3 hex chars of the next block to win the shared pot.",
+    tags: ["Bitcoin", "Game", "Prediction"],
   },
   {
-    title: 'Leo',
-    link: 'https://leo-lemon.vercel.app',
-    desc: 'No-code factory for Solana AI agents. Describe, configure, and deploy in under 2 minutes.',
-    tags: ['Solana', 'AI Agents', 'No-Code'],
+    title: "Leo",
+    link: "https://leo-lemon.vercel.app",
+    desc: "No-code factory for Solana AI agents. Describe, configure, and deploy in under 2 minutes.",
+    tags: ["Solana", "AI Agents", "No-Code"],
   },
   {
-    title: 'Shuffles',
-    link: 'https://shuffles.xyz',
-    desc: 'Mobile crypto trading and swapping across 7+ networks.',
-    tags: ['Mobile', 'DeFi', 'Solana'],
+    title: "Shuffles",
+    link: "https://shuffles.xyz",
+    desc: "Mobile crypto trading and swapping across 7+ networks.",
+    tags: ["Mobile", "DeFi", "Solana"],
   },
   {
-    title: 'OWS React Native',
-    link: 'https://github.com/rkmonarch/ows-react-native',
-    desc: 'React Native library for policy-gated autonomous payments on Solana using Open Wallet Standard (OWS) with HTTP 402 support.',
-    tags: ['React Native', 'Solana', 'OWS'],
+    title: "OWS React Native",
+    link: "https://github.com/rkmonarch/ows-react-native",
+    desc: "React Native library for policy-gated autonomous payments on Solana using Open Wallet Standard (OWS) with HTTP 402 support.",
+    tags: ["React Native", "Solana", "OWS"],
   },
   {
-    title: 'Lucy',
-    link: 'https://ethglobal.com/showcase/lucy-bi61z',
-    desc: 'AI-powered DeFi agent NFT managing complex DeFi strategies autonomously.',
-    tags: ['AI', 'DeFi', 'NFT'],
+    title: "Lucy",
+    link: "https://ethglobal.com/showcase/lucy-bi61z",
+    desc: "AI-powered DeFi agent NFT managing complex DeFi strategies autonomously.",
+    tags: ["AI", "DeFi", "NFT"],
   },
   {
-    title: 'TapPay',
-    link: 'https://ethglobal.com/showcase/tappay-941om',
-    desc: 'Chain-agnostic NFC payment app for seamless cross-chain payments via tap.',
-    tags: ['NFC', 'Payments', 'Cross-Chain'],
+    title: "TapPay",
+    link: "https://ethglobal.com/showcase/tappay-941om",
+    desc: "Chain-agnostic NFC payment app for seamless cross-chain payments via tap.",
+    tags: ["NFC", "Payments", "Cross-Chain"],
   },
   {
-    title: 'OnlyBlinks',
-    link: 'https://onlyblinks.com',
-    desc: 'Registry for 300+ different kinds of Solana blinks registered on the platform.',
-    tags: ['Solana', 'Blinks', 'Registry'],
+    title: "OnlyBlinks",
+    link: "https://onlyblinks.com",
+    desc: "Registry for 300+ different kinds of Solana blinks registered on the platform.",
+    tags: ["Solana", "Blinks", "Registry"],
   },
   {
-    title: 'simpfor-fun SDK',
-    link: 'https://www.npmjs.com/package/simpfor-fun-sdk',
-    desc: 'Copy-trading SDK built from scratch for Hyperliquid.',
-    tags: ['SDK', 'Trading', 'Hyperliquid'],
+    title: "SLOGAN SDK",
+    link: "https://www.npmjs.com/package/@rkmonarch/slogan",
+    desc: "Privacy SDK for Solana built around dual-key stealth addresses, memo-based payment discovery, claim flows, and same-denomination mixer primitives.",
+    tags: ["Solana", "Privacy", "SDK"],
   },
   {
-    title: 'blinks-mobile-sdk',
-    link: 'https://www.npmjs.com/package/blinks-mobile-sdk',
-    desc: 'React Native SDK with custom parsers & decoders for Solana Blinks.',
-    tags: ['React Native', 'SDK', 'Solana'],
+    title: "clearsign",
+    link: "https://www.npmjs.com/package/clearsign",
+    desc: "Security layer for DeFi treasuries and AI agent spend requests. OWS-native multi-signature with human-readable proposals, tamper-proof TTL, anomaly detection, and secure remote signing on Solana.",
+    tags: ["Solana", "Multi-Sig", "Security"],
   },
   {
-    title: 'Greg OWS',
-    link: 'https://github.com/rkmonarch/greg-ows',
-    desc: 'AI-powered Jupiter Lend trading agent on Solana using Open Wallet Standard (OWS) for secure local key signing.',
-    tags: ['AI Agents', 'Solana', 'DeFi'],
+    title: "blinks-mobile-sdk",
+    link: "https://www.npmjs.com/package/blinks-mobile-sdk",
+    desc: "React Native SDK with custom parsers & decoders for Solana Blinks.",
+    tags: ["React Native", "SDK", "Solana"],
+  },
+  {
+    title: "Greg OWS",
+    link: "https://github.com/rkmonarch/greg-ows",
+    desc: "AI-powered Jupiter Lend trading agent on Solana using Open Wallet Standard (OWS) for secure local key signing.",
+    tags: ["AI Agents", "Solana", "DeFi"],
   },
 ];
 
@@ -76,7 +82,9 @@ export default function ProjectsPage() {
     <main className="max-w-5xl mx-auto px-6 py-16">
       {/* Header */}
       <div className="mb-16">
-        <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] mb-4 font-semibold">Work</p>
+        <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] mb-4 font-semibold">
+          Work
+        </p>
         <div className="flex items-end justify-between gap-4">
           <h1 className="text-4xl md:text-5xl font-bold text-[#0d0d1a] tracking-tight">
             Projects
@@ -102,7 +110,7 @@ export default function ProjectsPage() {
           >
             {/* Number */}
             <span className="text-xs font-mono text-[#9898b0] pt-1.5 w-6 flex-shrink-0 group-hover:text-[#7C3AED] transition-colors">
-              {String(i + 1).padStart(2, '0')}
+              {String(i + 1).padStart(2, "0")}
             </span>
 
             {/* Content */}
