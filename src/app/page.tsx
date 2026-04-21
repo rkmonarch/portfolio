@@ -41,14 +41,14 @@ const experience = [
 
 const featured = [
   {
-    title: 'HashPot',
-    link: 'https://hashpot.fun',
-    desc: 'Bitcoin block hash prediction game — guess the last 3 hex chars to win the pot.',
+    title: 'SLOGAN SDK',
+    link: 'https://www.npmjs.com/package/@rkmonarch/slogan',
+    desc: 'Privacy SDK for Solana with stealth addresses, payment discovery, claim flows, and mixer primitives.',
   },
   {
-    title: 'Leo',
-    link: 'https://leo-lemon.vercel.app',
-    desc: 'No-code Solana AI agent factory. Describe once, deploy in under 2 minutes.',
+    title: 'clearsign',
+    link: 'https://www.npmjs.com/package/clearsign',
+    desc: 'OWS-native security layer for treasury and AI agent spend approvals with readable proposals and remote signing.',
   },
   {
     title: 'Shuffles',
