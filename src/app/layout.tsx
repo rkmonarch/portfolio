@@ -6,7 +6,7 @@ import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaMedium, FaTwitter } fr
 
 export const metadata = {
   title: 'Rahul Kulkarni',
-  description: 'Builds on Solana • DevRel • Infrastructure • Movies & Trails',
+  description: 'Builds on Solana • Security • Infrastructure • Movies & Trails',
   icons: { icon: '/rk.jpg' },
 };
 

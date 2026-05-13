@@ -46,17 +46,16 @@ export default function AboutPage() {
               and cultures, and spending time with family and friends.
             </p>
             <p>
-              I&apos;m currently leading Developer Relations at{' '}
+              I&apos;m currently Founder arc at{' '}
               <a
-                href="https://twitter.com/soon_svm"
+                href="https://clearsign.fun"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#7C3AED] hover:underline underline-offset-4 font-medium"
               >
-                SOON SVM
+                clearsign.fun
               </a>
-              , where I host weekly Discord office hours, help developers navigate the ecosystem,
-              and build resources that make blockchain development less painful.
+              , building a security layer for DeFi treasuries and AI agent spend requests on Solana.
             </p>
             <p>
               When I&apos;m not deep in code, I&apos;m reading, watching thriller or horror movies,
@@ -135,7 +134,7 @@ export default function AboutPage() {
           </div>
           <div className="space-y-1 pl-1">
             <p className="text-sm font-semibold text-[#0d0d1a]">Rahul Kulkarni</p>
-            <p className="text-xs text-[#5c5c78]">DevRel Lead @ SOON SVM</p>
+            <p className="text-xs text-[#5c5c78]">Founder arc @ clearsign.fun</p>
             <p className="text-xs text-[#9898b0]">Solana · Web3 · DeFi</p>
           </div>
         </div>

@@ -3,11 +3,18 @@ import Link from 'next/link';
 
 const experience = [
   {
+    company: 'clearsign.fun',
+    role: 'Founder arc',
+    period: '2026–Current',
+    link: 'https://clearsign.fun',
+    color: '#7C3AED',
+  },
+  {
     company: 'SOON SVM',
     role: 'DevRel Lead',
-    period: '2024–Current',
+    period: '2024–2026',
     link: 'https://twitter.com/soon_svm',
-    color: '#7C3AED',
+    color: '#6B7280',
   },
   {
     company: 'Solana Labs',
@@ -75,10 +82,15 @@ export default function Home() {
         <div className="relative">
           {/* Badge */}
           <div className="fade-up delay-1 mb-8">
-            <span className="inline-flex items-center gap-2 text-xs font-mono bg-[#7C3AED]/10 text-[#7C3AED] px-3 py-1.5 rounded-full border border-[#7C3AED]/20 font-medium">
+            <a
+              href="https://clearsign.fun"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-xs font-mono bg-[#7C3AED]/10 text-[#7C3AED] px-3 py-1.5 rounded-full border border-[#7C3AED]/20 font-medium hover:bg-[#7C3AED]/15 transition-colors"
+            >
               <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] pulse-dot" />
-              DevRel Lead @ SOON SVM
-            </span>
+              Founder arc @ clearsign.fun
+            </a>
           </div>
 
           {/* Name */}
