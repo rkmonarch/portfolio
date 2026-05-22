@@ -101,13 +101,13 @@ export default function Home() {
 
           {/* Tagline */}
           <p className="fade-up delay-3 text-lg md:text-xl text-[#5c5c78] max-w-lg mb-4 leading-relaxed">
-            Builder, explorer, and a little bit of a tech optimist.
+            I ship stuff on Solana and help others do the same.
           </p>
 
           {/* Bio */}
           <p className="fade-up delay-4 text-[#9898b0] text-base max-w-md mb-10 leading-relaxed">
             Building at the edge of web3 and developer experience.
-            Making Solana more accessible, one dev at a time.
+            $300M+ volume shipped, 50+ projects to mainnet, 25+ hackathons won.
           </p>
 
           {/* CTAs */}
