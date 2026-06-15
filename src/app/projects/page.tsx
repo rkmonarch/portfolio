@@ -10,16 +10,16 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "clearsign",
+    link: "https://clearsign.fun",
+    desc: "Security layer for DeFi treasuries and AI agent spend requests. OWS-native multi-signature with human-readable proposals, tamper-proof TTL, anomaly detection, and secure remote signing on Solana.",
+    tags: ["Solana", "Multi-Sig", "Security"],
+  },
+  {
     title: "HashPot",
     link: "https://hashpot.fun",
     desc: "Bitcoin block hash prediction game. Guess the last 3 hex chars of the next block to win the shared pot.",
     tags: ["Bitcoin", "Game", "Prediction"],
-  },
-  {
-    title: "Leo",
-    link: "https://leo-lemon.vercel.app",
-    desc: "No-code factory for Solana AI agents. Describe, configure, and deploy in under 2 minutes.",
-    tags: ["Solana", "AI Agents", "No-Code"],
   },
   {
     title: "Shuffles",
@@ -33,6 +33,13 @@ const projects: Project[] = [
     desc: "React Native library for policy-gated autonomous payments on Solana using Open Wallet Standard (OWS) with HTTP 402 support.",
     tags: ["React Native", "Solana", "OWS"],
   },
+  {
+    title: "Leo",
+    link: "https://leo-lemon.vercel.app",
+    desc: "No-code factory for Solana AI agents. Describe, configure, and deploy in under 2 minutes.",
+    tags: ["Solana", "AI Agents", "No-Code"],
+  },
+
   {
     title: "Lucy",
     link: "https://ethglobal.com/showcase/lucy-bi61z",
@@ -56,12 +63,6 @@ const projects: Project[] = [
     link: "https://www.npmjs.com/package/@rkmonarch/slogan",
     desc: "Privacy SDK for Solana built around dual-key stealth addresses, memo-based payment discovery, claim flows, and same-denomination mixer primitives.",
     tags: ["Solana", "Privacy", "SDK"],
-  },
-  {
-    title: "clearsign",
-    link: "https://www.npmjs.com/package/clearsign",
-    desc: "Security layer for DeFi treasuries and AI agent spend requests. OWS-native multi-signature with human-readable proposals, tamper-proof TTL, anomaly detection, and secure remote signing on Solana.",
-    tags: ["Solana", "Multi-Sig", "Security"],
   },
   {
     title: "blinks-mobile-sdk",
