@@ -1,27 +1,42 @@
-'use client';
-import React from 'react';
-import { FaEnvelope, FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
+"use client";
+import React from "react";
+import { FaEnvelope, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 
-const interests = [
-  { icon: '💻', label: 'Web3 & Solana' },
-  { icon: '✈️', label: 'Traveling & Hiking' },
-  { icon: '🏏', label: 'Cricket' },
-  { icon: '🎬', label: 'Movies & TV' },
-  { icon: '📚', label: 'Reading' },
-  { icon: '👨‍👩‍👧‍👦', label: 'Family & Friends' },
-  { icon: '🍳', label: 'Cooking' },
+const focus = [
+  {
+    label: "Developer Relations",
+    detail: "Onboarding, docs, and workshops that get builders shipping faster",
+  },
+  {
+    label: "Agentic Infrastructure",
+    detail: "MCP servers and policy-gated systems for AI agents on Solana",
+  },
+  {
+    label: "Ecosystem Growth",
+    detail: "Taking projects from zero to mainnet with real adoption",
+  },
 ];
 
-const currentlyReading = [
-  { title: 'The Island of Sea Women', author: 'Lisa See' },
-  { title: 'The Night Circus', author: 'Erin Morgenstern' },
+const stack = [
+  "TypeScript",
+  "Rust",
+  "Python",
+  "Go",
+  "Solana",
+  "Anchor",
+  "Next.js",
+  "React Native",
 ];
 
 const socials = [
-  { href: 'mailto:rkweb3.00@gmail.com', Icon: FaEnvelope, label: 'Email' },
-  { href: 'https://twitter.com/0xrahul', Icon: FaTwitter, label: 'Twitter' },
-  { href: 'https://github.com/rkmonarch', Icon: FaGithub, label: 'GitHub' },
-  { href: 'https://linkedin.com/in/0xrahul', Icon: FaLinkedin, label: 'LinkedIn' },
+  { href: "mailto:rkweb3.00@gmail.com", Icon: FaEnvelope, label: "Email" },
+  { href: "https://x.com/0xrahul", Icon: FaTwitter, label: "X" },
+  { href: "https://github.com/rkmonarch", Icon: FaGithub, label: "GitHub" },
+  {
+    href: "https://linkedin.com/in/0xrahul",
+    Icon: FaLinkedin,
+    label: "LinkedIn",
+  },
 ];
 
 export default function AboutPage() {
@@ -29,7 +44,9 @@ export default function AboutPage() {
     <main className="max-w-5xl mx-auto px-6 py-16">
       {/* Header */}
       <div className="mb-14">
-        <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] mb-4 font-semibold">About</p>
+        <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] mb-4 font-semibold">
+          About
+        </p>
         <h1 className="text-4xl md:text-5xl font-bold text-[#0d0d1a] tracking-tight">
           Rahul Kulkarni
         </h1>
@@ -38,15 +55,16 @@ export default function AboutPage() {
       <div className="grid grid-cols-1 md:grid-cols-[1fr_240px] gap-16 items-start">
         {/* Left */}
         <div className="space-y-12">
-
           {/* Bio */}
           <div className="space-y-4 text-[#5c5c78] text-base leading-relaxed">
             <p>
-              Hey! I&apos;m Rahul. I love building cool things in web3, exploring new countries
-              and cultures, and spending time with family and friends.
+              I build production systems at the intersection of AI, blockchain,
+              and developer tooling. Most recently DevRel Lead at SOON SVM,
+              where I worked directly with 50+ teams to take their products from
+              zero to mainnet.
             </p>
             <p>
-              I&apos;m currently Founder arc at{' '}
+              I&apos;m currently Building{" "}
               <a
                 href="https://clearsign.fun"
                 target="_blank"
@@ -55,52 +73,48 @@ export default function AboutPage() {
               >
                 clearsign.fun
               </a>
-              , building a security layer for DeFi treasuries and AI agent spend requests on Solana.
+              , a policy-gated signing and intent verification layer for Solana
+              treasuries and AI agents.
             </p>
             <p>
-              When I&apos;m not deep in code, I&apos;m reading, watching thriller or horror movies,
-              or exploring a new trail. Timothée Chalamet is my favorite actor. My favorite films
-              are <strong className="text-[#0d0d1a] font-medium">Dune</strong> and{' '}
-              <strong className="text-[#0d0d1a] font-medium">Grown Ups</strong>, and my favorite
-              shows are <strong className="text-[#0d0d1a] font-medium">Dark</strong> and{' '}
-              <strong className="text-[#0d0d1a] font-medium">The Vampire Diaries</strong>.
+              Outside of building, I&apos;m usually exploring a new trail,
+              watching a thriller, or planning the next trip.
             </p>
           </div>
 
-          {/* Interests — no boxes, just clean inline chips */}
+          {/* Focus areas */}
           <div>
             <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] mb-5 font-semibold">
-              Interests
+              Focus
             </p>
-            <div className="flex flex-wrap gap-x-6 gap-y-3">
-              {interests.map(({ icon, label }) => (
-                <span key={label} className="flex items-center gap-2 text-[#5c5c78]">
-                  <span className="text-base">{icon}</span>
-                  <span className="text-sm">{label}</span>
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* Currently Reading */}
-          <div>
-            <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] mb-5 font-semibold">
-              Currently Reading
-            </p>
-            <div className="space-y-4">
-              {currentlyReading.map(({ title, author }) => (
-                <div key={title} className="flex items-start gap-3">
-                  <span className="text-lg mt-0.5 leading-none">📖</span>
-                  <div>
-                    <p className="text-sm font-medium text-[#0d0d1a]">{title}</p>
-                    <p className="text-xs text-[#9898b0] mt-0.5">{author}</p>
-                  </div>
+            <div className="space-y-5">
+              {focus.map(({ label, detail }) => (
+                <div key={label}>
+                  <p className="text-sm font-medium text-[#0d0d1a]">{label}</p>
+                  <p className="text-sm text-[#9898b0] mt-1">{detail}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Connect — plain text links, no boxes */}
+          {/* Stack */}
+          <div>
+            <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] mb-5 font-semibold">
+              Stack
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {stack.map((tech) => (
+                <span
+                  key={tech}
+                  className="text-sm text-[#5c5c78] border border-black/[0.08] rounded-md px-3 py-1"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Connect */}
           <div>
             <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] mb-5 font-semibold">
               Connect
@@ -120,7 +134,6 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-
         </div>
 
         {/* Right: Photo */}
@@ -133,9 +146,11 @@ export default function AboutPage() {
             />
           </div>
           <div className="space-y-1 pl-1">
-            <p className="text-sm font-semibold text-[#0d0d1a]">Rahul Kulkarni</p>
-            <p className="text-xs text-[#5c5c78]">Founder arc @ clearsign.fun</p>
-            <p className="text-xs text-[#9898b0]">Solana · Web3 · DeFi</p>
+            <p className="text-sm font-semibold text-[#0d0d1a]">
+              Rahul Kulkarni
+            </p>
+            <p className="text-xs text-[#5c5c78]">Founder @ clearsign.fun</p>
+            <p className="text-xs text-[#9898b0]">Solana · AI · DeFi</p>
           </div>
         </div>
       </div>

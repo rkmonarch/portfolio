@@ -1,66 +1,66 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 const experience = [
   {
-    company: 'clearsign.fun',
-    role: 'Founder arc',
-    period: '2026–Current',
-    link: 'https://clearsign.fun',
-    color: '#7C3AED',
+    company: "clearsign.fun",
+    role: "Founder",
+    period: "2026–Current",
+    link: "https://clearsign.fun",
+    color: "#7C3AED",
   },
   {
-    company: 'SOON SVM',
-    role: 'DevRel Lead',
-    period: '2024–2026',
-    link: 'https://twitter.com/soon_svm',
-    color: '#6B7280',
+    company: "SOON SVM",
+    role: "DevRel Lead",
+    period: "2024–2026",
+    link: "https://twitter.com/soon_svm",
+    color: "#6B7280",
   },
   {
-    company: 'Solana Labs',
-    role: 'Solana Fellow',
-    period: '2024',
-    link: 'https://twitter.com/solana',
-    color: '#059669',
+    company: "Solana Labs",
+    role: "Solana Fellow",
+    period: "2024",
+    link: "https://twitter.com/solana",
+    color: "#059669",
   },
   {
-    company: 'Shuffles',
-    role: 'Founder',
-    period: '2024',
-    link: 'https://twitter.com/shuffles_xyz',
-    color: '#0284C7',
+    company: "Shuffles",
+    role: "Founder",
+    period: "2024",
+    link: "https://twitter.com/shuffles_xyz",
+    color: "#0284C7",
   },
   {
-    company: 'Fetcch',
-    role: 'DevRel',
-    period: '2023–2024',
-    link: 'https://twitter.com/FetcchX',
-    color: '#DB2777',
+    company: "Fetcch",
+    role: "DevRel",
+    period: "2023–2024",
+    link: "https://twitter.com/FetcchX",
+    color: "#DB2777",
   },
   {
-    company: 'iCeipts Technologies',
-    role: 'Software Engineer',
-    period: '2021–2023',
-    link: 'https://iceipts.com',
-    color: '#D97706',
+    company: "iCeipts Technologies",
+    role: "Software Engineer",
+    period: "2021–2023",
+    link: "https://iceipts.com",
+    color: "#D97706",
   },
 ];
 
 const featured = [
   {
-    title: 'SLOGAN SDK',
-    link: 'https://www.npmjs.com/package/@rkmonarch/slogan',
-    desc: 'Privacy SDK for Solana with stealth addresses, payment discovery, claim flows, and mixer primitives.',
+    title: "clearsign",
+    link: "https://clearsign.fun",
+    desc: "Security layer for DeFi treasuries and AI agent spend requests. OWS-native multi-signature with human-readable proposals, tamper-proof TTL, anomaly detection, and secure remote signing on Solana.",
   },
   {
-    title: 'clearsign',
-    link: 'https://www.npmjs.com/package/clearsign',
-    desc: 'OWS-native security layer for treasury and AI agent spend approvals with readable proposals and remote signing.',
+    title: "Shuffles",
+    link: "https://shuffles.xyz",
+    desc: "Mobile crypto trading and swapping across 7+ networks.",
   },
   {
-    title: 'Shuffles',
-    link: 'https://shuffles.xyz',
-    desc: 'Mobile crypto trading and swapping across 7+ networks.',
+    title: "SLOGAN SDK",
+    link: "https://www.npmjs.com/package/@rkmonarch/slogan",
+    desc: "Privacy SDK for Solana with stealth addresses, payment discovery, claim flows, and mixer primitives.",
   },
 ];
 
@@ -72,11 +72,17 @@ export default function Home() {
         {/* Decorative blobs */}
         <div
           className="absolute top-0 right-0 w-[480px] h-[480px] rounded-full pointer-events-none -z-10"
-          style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%)' }}
+          style={{
+            background:
+              "radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%)",
+          }}
         />
         <div
           className="absolute bottom-10 left-10 w-[320px] h-[320px] rounded-full pointer-events-none -z-10"
-          style={{ background: 'radial-gradient(circle, rgba(5,150,105,0.06) 0%, transparent 70%)' }}
+          style={{
+            background:
+              "radial-gradient(circle, rgba(5,150,105,0.06) 0%, transparent 70%)",
+          }}
         />
 
         <div className="relative">
@@ -89,13 +95,14 @@ export default function Home() {
               className="inline-flex items-center gap-2 text-xs font-mono bg-[#7C3AED]/10 text-[#7C3AED] px-3 py-1.5 rounded-full border border-[#7C3AED]/20 font-medium hover:bg-[#7C3AED]/15 transition-colors"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] pulse-dot" />
-              Founder arc @ clearsign.fun
+              Builder @ clearsign.fun
             </a>
           </div>
 
           {/* Name */}
           <h1 className="fade-up delay-2 text-[clamp(52px,10vw,96px)] font-bold tracking-tight leading-[0.92] mb-6 text-[#0d0d1a]">
-            Rahul<br />
+            Rahul
+            <br />
             Kulkarni<span className="text-[#7C3AED]">.</span>
           </h1>
 
@@ -106,8 +113,8 @@ export default function Home() {
 
           {/* Bio */}
           <p className="fade-up delay-4 text-[#9898b0] text-base max-w-md mb-10 leading-relaxed">
-            Building at the edge of web3 and developer experience.
-            $300M+ volume shipped, 50+ projects to mainnet, 25+ hackathons won.
+            Building at the edge of web3 and developer experience. $300M+ volume
+            shipped, 50+ projects to mainnet, 25+ hackathons won.
           </p>
 
           {/* CTAs */}
@@ -163,7 +170,9 @@ export default function Home() {
                   <span className="text-[#5c5c78] text-sm">{exp.role}</span>
                 </div>
               </div>
-              <span className="text-xs text-[#9898b0] font-mono tabular-nums">{exp.period}</span>
+              <span className="text-xs text-[#9898b0] font-mono tabular-nums">
+                {exp.period}
+              </span>
             </a>
           ))}
         </div>
@@ -200,7 +209,7 @@ export default function Home() {
                   {project.title}
                 </span>
                 <span className="hidden sm:block text-[#d4d4e0] text-xs flex-1 overflow-hidden">
-                  {'·'.repeat(80)}
+                  {"·".repeat(80)}
                 </span>
                 <span className="text-sm text-[#9898b0] sm:text-right mt-0.5 sm:mt-0 truncate max-w-xs">
                   {project.desc}
