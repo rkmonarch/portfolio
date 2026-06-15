@@ -76,10 +76,6 @@ export default function AboutPage() {
               , a policy-gated signing and intent verification layer for Solana
               treasuries and AI agents.
             </p>
-            <p>
-              Outside of building, I&apos;m usually exploring a new trail,
-              watching a thriller, or planning the next trip.
-            </p>
           </div>
 
           {/* Focus areas */}
@@ -140,7 +136,7 @@ export default function AboutPage() {
         <div className="flex flex-col gap-4">
           <div className="w-full rounded-2xl overflow-hidden border border-black/[0.07] shadow-sm">
             <img
-              src="/rk.jpg"
+              src="/1.jpeg"
               alt="Rahul Kulkarni"
               className="w-full aspect-square object-cover"
             />

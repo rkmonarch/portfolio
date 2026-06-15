@@ -99,24 +99,31 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Name */}
-          <h1 className="fade-up delay-2 text-[clamp(52px,10vw,96px)] font-bold tracking-tight leading-[0.92] mb-6 text-[#0d0d1a]">
-            Rahul
-            <br />
-            Kulkarni<span className="text-[#7C3AED]">.</span>
-          </h1>
+          {/* Hero Section */}
+          <div className="max-w-3xl">
+            {/* Name */}
+            <h1 className="fade-up delay-2 text-[clamp(52px,10vw,96px)] font-bold tracking-tight leading-[0.92] mb-6 text-[#0d0d1a]">
+              Rahul
+              <br />
+              Kulkarni<span className="text-[#7C3AED]">.</span>
+            </h1>
 
-          {/* Tagline */}
-          <p className="fade-up delay-3 text-lg md:text-xl text-[#5c5c78] max-w-lg mb-4 leading-relaxed">
-            I ship stuff on Solana and help others do the same.
-          </p>
+            {/* Metrics */}
+            <p className="fade-up delay-3 text-lg md:text-xl text-[#5c5c78] mb-3">
+              $300M+ volume • 50+ projects shipped to mainnet
+            </p>
 
-          {/* Bio */}
-          <p className="fade-up delay-4 text-[#9898b0] text-base max-w-md mb-10 leading-relaxed">
-            Building at the edge of web3 and developer experience. $300M+ volume
-            shipped, 50+ projects to mainnet, 25+ hackathons won.
-          </p>
+            {/* Tagline */}
+            <p className="fade-up delay-4 text-xl md:text-2xl font-medium text-[#0d0d1a] leading-tight mb-8">
+              Building institutional-grade infrastructure for AI agents and
+              Solana treasuries.
+            </p>
 
+            {/* Secondary line */}
+            <p className="fade-up delay-5 text-[#9898b0] text-base max-w-md leading-relaxed">
+              Ex-DevRel Lead @ SOON SVM
+            </p>
+          </div>
           {/* CTAs */}
           <div className="fade-up delay-5 flex flex-wrap gap-3">
             <Link
