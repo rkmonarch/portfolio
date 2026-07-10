@@ -1,155 +1,116 @@
-"use client";
-import React from "react";
-import { FaEnvelope, FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
+import type { Metadata } from "next";
+import Image from "next/image";
+import { site, socials, currently } from "@/lib/data";
 
-const focus = [
-  {
-    label: "Developer Relations",
-    detail: "Onboarding, docs, and workshops that get builders shipping faster",
-  },
-  {
-    label: "Agentic Infrastructure",
-    detail: "MCP servers and policy-gated systems for AI agents on Solana",
-  },
-  {
-    label: "Ecosystem Growth",
-    detail: "Taking projects from zero to mainnet with real adoption",
-  },
-];
-
-const stack = [
-  "TypeScript",
-  "Rust",
-  "Python",
-  "Go",
-  "Solana",
-  "Anchor",
-  "Next.js",
-  "React Native",
-];
-
-const socials = [
-  { href: "mailto:rkweb3.00@gmail.com", Icon: FaEnvelope, label: "Email" },
-  { href: "https://x.com/0xrahul", Icon: FaTwitter, label: "X" },
-  { href: "https://github.com/rkmonarch", Icon: FaGithub, label: "GitHub" },
-  {
-    href: "https://linkedin.com/in/0xrahul",
-    Icon: FaLinkedin,
-    label: "LinkedIn",
-  },
-];
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "I've always been more interested in understanding systems than headlines.",
+};
 
 export default function AboutPage() {
   return (
-    <main className="max-w-5xl mx-auto px-6 py-16">
-      {/* Header */}
-      <div className="mb-14">
-        <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] mb-4 font-semibold">
+    <>
+      <header className="pt-20 sm:pt-28">
+        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-ink">
           About
-        </p>
-        <h1 className="text-4xl md:text-5xl font-bold text-[#0d0d1a] tracking-tight">
-          Rahul Kulkarni
         </h1>
+      </header>
+
+      <div className="mt-10 space-y-6 text-[17px] text-ink-secondary leading-relaxed">
+        <p className="text-ink text-xl leading-relaxed font-medium tracking-tight">
+          The question I keep coming back to is &ldquo;why was it built this
+          way?&rdquo;
+        </p>
+        <p>
+          Whether it&apos;s AI memory, market infrastructure, or developer
+          tools, I enjoy figuring out why something works before building on
+          top of it. Once you understand the architecture, most things stop
+          being magic — and the interesting problems become obvious.
+        </p>
+        <p>
+          That habit shaped my path. I started as a software engineer
+          building scan-and-pay apps and supply-chain systems. Then three
+          years of developer relations — Fetcch, then SOON SVM — where I
+          explained systems to smart people every day. There&apos;s no faster
+          way to find out which parts you don&apos;t actually understand.
+        </p>
+        <p>
+          Now I&apos;m building{" "}
+          <a
+            href="https://clearsign.fun"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-ink underline underline-offset-4 decoration-line-strong hover:decoration-ink transition-colors"
+          >
+            ClearSign
+          </a>
+          : agents that can move money, and a verification layer that makes
+          that safe. It&apos;s everything I care about in one product —
+          trust, autonomy, and complexity that disappears instead of leaking
+          into the interface.
+        </p>
+        <p>
+          Away from the keyboard: trails, and films I&apos;ve already seen
+          too many times.
+        </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_240px] gap-16 items-start">
-        {/* Left */}
-        <div className="space-y-12">
-          {/* Bio */}
-          <div className="space-y-4 text-[#5c5c78] text-base leading-relaxed">
-            <p>
-              I build production systems at the intersection of AI, blockchain,
-              and developer tooling. Most recently DevRel Lead at SOON SVM,
-              where I worked directly with 50+ teams to take their products from
-              zero to mainnet.
-            </p>
-            <p>
-              I&apos;m currently Building{" "}
+      <figure className="mt-14">
+        <Image
+          src="/1.jpeg"
+          alt="Rahul Kulkarni speaking at ETH KL"
+          width={680}
+          height={510}
+          className="w-full rounded-xl border border-line object-cover"
+        />
+      </figure>
+
+      <section className="mt-14 border-t border-line pt-10">
+        <p className="text-[13px] font-medium text-ink-muted tracking-wide uppercase mb-4">
+          Currently
+        </p>
+        <ul className="space-y-2">
+          {currently.items.map((item) => (
+            <li key={item} className="text-[15px] text-ink-secondary">
+              {item}
+            </li>
+          ))}
+          <li className="text-[15px] text-ink-muted pt-1">
+            {currently.location}
+          </li>
+        </ul>
+      </section>
+
+      <section className="mt-14 border-t border-line pt-10">
+        <p className="text-[13px] font-medium text-ink-muted tracking-wide uppercase mb-4">
+          Elsewhere
+        </p>
+        <ul className="flex flex-wrap gap-x-6 gap-y-2">
+          {socials.map(({ label, href }) => (
+            <li key={label}>
               <a
-                href="https://clearsign.fun"
-                target="_blank"
+                href={href}
+                target={href.startsWith("mailto") ? undefined : "_blank"}
                 rel="noopener noreferrer"
-                className="text-[#7C3AED] hover:underline underline-offset-4 font-medium"
+                className="text-sm text-ink-secondary hover:text-ink transition-colors underline underline-offset-4 decoration-line-strong hover:decoration-ink"
               >
-                clearsign.fun
+                {label}
               </a>
-              , a policy-gated signing and intent verification layer for Solana
-              treasuries and AI agents.
-            </p>
-          </div>
-
-          {/* Focus areas */}
-          <div>
-            <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] mb-5 font-semibold">
-              Focus
-            </p>
-            <div className="space-y-5">
-              {focus.map(({ label, detail }) => (
-                <div key={label}>
-                  <p className="text-sm font-medium text-[#0d0d1a]">{label}</p>
-                  <p className="text-sm text-[#9898b0] mt-1">{detail}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Stack */}
-          <div>
-            <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] mb-5 font-semibold">
-              Stack
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {stack.map((tech) => (
-                <span
-                  key={tech}
-                  className="text-sm text-[#5c5c78] border border-black/[0.08] rounded-md px-3 py-1"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* Connect */}
-          <div>
-            <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] mb-5 font-semibold">
-              Connect
-            </p>
-            <div className="flex flex-wrap gap-6">
-              {socials.map(({ href, Icon, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-sm text-[#5c5c78] hover:text-[#7C3AED] transition-colors"
-                >
-                  <Icon size={13} />
-                  {label}
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Right: Photo */}
-        <div className="flex flex-col gap-4">
-          <div className="w-full rounded-2xl overflow-hidden border border-black/[0.07] shadow-sm">
-            <img
-              src="/1.jpeg"
-              alt="Rahul Kulkarni"
-              className="w-full aspect-square object-cover"
-            />
-          </div>
-          <div className="space-y-1 pl-1">
-            <p className="text-sm font-semibold text-[#0d0d1a]">
-              Rahul Kulkarni
-            </p>
-            <p className="text-xs text-[#5c5c78]">Founder @ clearsign.fun</p>
-            <p className="text-xs text-[#9898b0]">Solana · AI · DeFi</p>
-          </div>
-        </div>
-      </div>
-    </main>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-6 text-sm text-ink-muted">
+          Or just write to{" "}
+          <a
+            href={`mailto:${site.email}`}
+            className="text-ink-secondary hover:text-ink transition-colors underline underline-offset-4 decoration-line-strong hover:decoration-ink"
+          >
+            {site.email}
+          </a>
+          .
+        </p>
+      </section>
+    </>
   );
 }

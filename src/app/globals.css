@@ -1,68 +1,83 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #F6F5FF;
-  --surface: #FFFFFF;
-  --surface-raised: #F0EEF9;
-  --border: rgba(0, 0, 0, 0.07);
-  --text-primary: #0d0d1a;
-  --text-secondary: #5c5c78;
-  --text-muted: #9898b0;
-  --accent: #7C3AED;
-  --accent-hover: #6D28D9;
-  --accent-dim: rgba(124, 58, 237, 0.1);
-  --accent-glow: rgba(124, 58, 237, 0.2);
+  --bg: #fcfcfc;
+  --ink: #17171c;
+  --ink-secondary: #5c5c66;
+  --ink-muted: #9a9aa3;
+  --line: rgba(23, 23, 28, 0.08);
+  --line-strong: rgba(23, 23, 28, 0.16);
 }
 
 @theme inline {
   --color-background: var(--bg);
-  --color-foreground: var(--text-primary);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground: var(--ink);
+  --color-ink: var(--ink);
+  --color-ink-secondary: var(--ink-secondary);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 body {
   background: var(--bg);
-  color: var(--text-primary);
-  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
-  min-height: 100vh;
-  overflow-x: hidden;
+  color: var(--ink);
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.15); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.25); }
-
-::selection { background: rgba(124, 58, 237, 0.2); color: #0d0d1a; }
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(18px); }
-  to { opacity: 1; transform: translateY(0); }
+::selection {
+  background: rgba(23, 23, 28, 0.9);
+  color: #fcfcfc;
 }
 
-@keyframes pulseDot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.35; }
+/* Single, restrained entrance used on the hero only. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.fade-up {
+.rise {
   opacity: 0;
-  animation: fadeUp 0.55s ease forwards;
+  animation: rise 0.6s cubic-bezier(0.21, 0.47, 0.32, 0.98) forwards;
 }
 
-.delay-1 { animation-delay: 80ms; }
-.delay-2 { animation-delay: 180ms; }
-.delay-3 { animation-delay: 300ms; }
-.delay-4 { animation-delay: 420ms; }
-.delay-5 { animation-delay: 540ms; }
+.rise-1 { animation-delay: 0ms; }
+.rise-2 { animation-delay: 90ms; }
+.rise-3 { animation-delay: 180ms; }
+.rise-4 { animation-delay: 270ms; }
 
-.pulse-dot {
-  animation: pulseDot 2s ease-in-out infinite;
+a,
+button {
+  outline-offset: 3px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--ink);
+  border-radius: 2px;
 }

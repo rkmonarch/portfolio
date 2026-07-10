@@ -1,234 +1,258 @@
-import React from "react";
 import Link from "next/link";
-
-const experience = [
-  {
-    company: "clearsign.fun",
-    role: "Founder",
-    period: "2026–Current",
-    link: "https://clearsign.fun",
-    color: "#7C3AED",
-  },
-  {
-    company: "SOON SVM",
-    role: "DevRel Lead",
-    period: "2024–2026",
-    link: "https://twitter.com/soon_svm",
-    color: "#6B7280",
-  },
-  {
-    company: "Solana Labs",
-    role: "Solana Fellow",
-    period: "2024",
-    link: "https://twitter.com/solana",
-    color: "#059669",
-  },
-  {
-    company: "Shuffles",
-    role: "Founder",
-    period: "2024",
-    link: "https://twitter.com/shuffles_xyz",
-    color: "#0284C7",
-  },
-  {
-    company: "Fetcch",
-    role: "DevRel",
-    period: "2023–2024",
-    link: "https://twitter.com/FetcchX",
-    color: "#DB2777",
-  },
-  {
-    company: "iCeipts Technologies",
-    role: "Software Engineer",
-    period: "2021–2023",
-    link: "https://iceipts.com",
-    color: "#D97706",
-  },
-];
-
-const featured = [
-  {
-    title: "clearsign",
-    link: "https://clearsign.fun",
-    desc: "Security layer for DeFi treasuries and AI agent spend requests. OWS-native multi-signature with human-readable proposals, tamper-proof TTL, anomaly detection, and secure remote signing on Solana.",
-  },
-  {
-    title: "Shuffles",
-    link: "https://shuffles.xyz",
-    desc: "Mobile crypto trading and swapping across 7+ networks.",
-  },
-  {
-    title: "SLOGAN SDK",
-    link: "https://www.npmjs.com/package/@rkmonarch/slogan",
-    desc: "Privacy SDK for Solana with stealth addresses, payment discovery, claim flows, and mixer primitives.",
-  },
-];
+import { Section } from "@/components/section";
+import {
+  site,
+  projects,
+  essays,
+  essaysInProgress,
+  experience,
+  openSource,
+  currently,
+} from "@/lib/data";
 
 export default function Home() {
-  return (
-    <div>
-      {/* Hero */}
-      <section className="relative max-w-5xl mx-auto px-6 pt-20 pb-28 overflow-hidden">
-        {/* Decorative blobs */}
-        <div
-          className="absolute top-0 right-0 w-[480px] h-[480px] rounded-full pointer-events-none -z-10"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%)",
-          }}
-        />
-        <div
-          className="absolute bottom-10 left-10 w-[320px] h-[320px] rounded-full pointer-events-none -z-10"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(5,150,105,0.06) 0%, transparent 70%)",
-          }}
-        />
+  const featuredProjects = projects.filter((p) => p.featured);
+  const featuredEssays = [
+    ...essaysInProgress.filter((e) => e.featured),
+    ...essays.filter((e) => e.featured),
+  ];
 
-        <div className="relative">
-          {/* Badge */}
-          <div className="fade-up delay-1 mb-8">
+  return (
+    <>
+      {/* Hero */}
+      <section className="pt-24 sm:pt-32 pb-4">
+        <h1 className="rise rise-1 text-[clamp(2.25rem,7vw,3.5rem)] font-semibold tracking-tight leading-[1.05] text-ink">
+          Rahul Kulkarni
+        </h1>
+        <p className="rise rise-1 mt-4 text-base text-ink-muted">
+          Builder · Engineer · Writer
+        </p>
+        <p className="rise rise-2 mt-10 text-xl sm:text-2xl font-medium tracking-tight leading-snug text-ink text-balance">
+          Building AI systems that make complex technology feel simple.
+        </p>
+        <div className="rise rise-2 mt-6 text-lg text-ink-secondary leading-relaxed">
+          <p>I build products, explain systems, and write about AI and Crypto.</p>
+          <p>
+            Currently building{" "}
             <a
               href="https://clearsign.fun"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs font-mono bg-[#7C3AED]/10 text-[#7C3AED] px-3 py-1.5 rounded-full border border-[#7C3AED]/20 font-medium hover:bg-[#7C3AED]/15 transition-colors"
+              className="text-ink underline underline-offset-4 decoration-line-strong hover:decoration-ink transition-colors"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] pulse-dot" />
-              Builder @ clearsign.fun
+              ClearSign
             </a>
-          </div>
-
-          {/* Hero Section */}
-          <div className="max-w-3xl">
-            {/* Name */}
-            <h1 className="fade-up delay-2 text-[clamp(52px,10vw,96px)] font-bold tracking-tight leading-[0.92] mb-6 text-[#0d0d1a]">
-              Rahul
-              <br />
-              Kulkarni<span className="text-[#7C3AED]">.</span>
-            </h1>
-
-            {/* Metrics */}
-            <p className="fade-up delay-3 text-lg md:text-xl text-[#5c5c78] mb-3">
-              $300M+ volume • 50+ projects shipped to mainnet
-            </p>
-
-            {/* Tagline */}
-            <p className="fade-up delay-4 text-xl md:text-2xl font-medium text-[#0d0d1a] leading-tight mb-8">
-              Building institutional-grade infrastructure for AI agents and
-              Solana treasuries.
-            </p>
-
-            {/* Secondary line */}
-            <p className="fade-up delay-5 text-[#9898b0] text-base max-w-md leading-relaxed">
-              Ex-DevRel Lead @ SOON SVM
-            </p>
-          </div>
-          {/* CTAs */}
-          <div className="fade-up delay-5 flex flex-wrap gap-3">
-            <Link
-              href="/projects"
-              className="bg-[#7C3AED] text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-[#6D28D9] transition-colors shadow-sm"
-            >
-              View Projects →
-            </Link>
-            <Link
-              href="/about"
-              className="text-sm font-medium text-[#5c5c78] px-5 py-2.5 rounded-lg border border-black/10 hover:border-black/20 hover:text-[#0d0d1a] hover:bg-black/[0.03] transition-colors"
-            >
-              About Me
-            </Link>
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-[#5c5c78] px-5 py-2.5 rounded-lg border border-black/10 hover:border-black/20 hover:text-[#0d0d1a] hover:bg-black/[0.03] transition-colors"
-            >
-              Resume ↗
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Experience */}
-      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-black/[0.06]">
-        <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] mb-8 font-semibold">
-          Experience
-        </p>
-        <div className="divide-y divide-black/[0.04]">
-          {experience.map((exp) => (
-            <a
-              key={exp.company}
-              href={exp.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-between py-4 -mx-3 px-3 rounded-lg hover:bg-black/[0.03] transition-colors"
-            >
-              <div className="flex items-center gap-4">
-                <span
-                  className="w-2 h-2 rounded-full flex-shrink-0"
-                  style={{ background: exp.color }}
-                />
-                <div>
-                  <span className="font-medium text-[#0d0d1a] group-hover:text-[#7C3AED] transition-colors">
-                    {exp.company}
-                  </span>
-                  <span className="text-[#9898b0] mx-2">·</span>
-                  <span className="text-[#5c5c78] text-sm">{exp.role}</span>
-                </div>
-              </div>
-              <span className="text-xs text-[#9898b0] font-mono tabular-nums">
-                {exp.period}
-              </span>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      {/* Selected Work — editorial list */}
-      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-black/[0.06]">
-        <div className="flex items-baseline justify-between mb-2">
-          <p className="text-xs font-mono text-[#7C3AED] uppercase tracking-[0.15em] font-semibold">
-            Selected Work
+            .
           </p>
+          <p>Previously DevRel Lead at SOON SVM.</p>
+        </div>
+        <div className="rise rise-3 mt-10 flex flex-wrap items-center gap-3">
           <Link
             href="/projects"
-            className="text-xs text-[#9898b0] hover:text-[#5c5c78] transition-colors"
+            className="inline-flex items-center h-10 px-5 rounded-full bg-ink text-[#fcfcfc] text-sm font-medium hover:bg-black transition-colors"
           >
-            View all →
+            Things I&apos;ve built
+          </Link>
+          <Link
+            href="/writing"
+            className="inline-flex items-center h-10 px-5 rounded-full border border-line-strong text-sm font-medium text-ink hover:border-ink transition-colors"
+          >
+            Read essays
           </Link>
         </div>
+      </section>
 
-        <div className="mt-6">
-          {featured.map((project, i) => (
+      {/* Things I've built */}
+      <Section
+        label="Things I've built"
+        more={{ href: "/projects", text: "Everything I've built" }}
+      >
+        <div className="divide-y divide-line border-y border-line">
+          {featuredProjects.map((project) => (
             <a
-              key={project.title}
-              href={project.link}
+              key={project.name}
+              href={project.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-5 py-5 border-b border-black/[0.05] last:border-0 hover:translate-x-1.5 transition-transform duration-200"
+              className="group block py-8"
             >
-              <span className="text-xs font-mono text-[#9898b0] w-5 flex-shrink-0 group-hover:text-[#7C3AED] transition-colors">
-                0{i + 1}
-              </span>
-              <div className="flex-1 min-w-0 flex flex-col sm:flex-row sm:items-center sm:gap-4">
-                <span className="font-semibold text-[#0d0d1a] group-hover:text-[#7C3AED] transition-colors whitespace-nowrap">
-                  {project.title}
-                </span>
-                <span className="hidden sm:block text-[#d4d4e0] text-xs flex-1 overflow-hidden">
-                  {"·".repeat(80)}
-                </span>
-                <span className="text-sm text-[#9898b0] sm:text-right mt-0.5 sm:mt-0 truncate max-w-xs">
-                  {project.desc}
+              <div className="flex items-baseline justify-between gap-4">
+                <h3 className="text-lg font-semibold tracking-tight text-ink">
+                  {project.name}
+                </h3>
+                <span
+                  aria-hidden
+                  className="text-ink-muted group-hover:text-ink transition-colors text-sm"
+                >
+                  ↗
                 </span>
               </div>
-              <span className="text-[#9898b0] group-hover:text-[#7C3AED] transition-colors flex-shrink-0 text-sm">
-                ↗
-              </span>
+              <p className="mt-1 text-ink-secondary">{project.tagline}</p>
+              <p className="mt-3 text-[15px] text-ink-muted leading-relaxed group-hover:text-ink-secondary transition-colors">
+                {project.story}
+              </p>
             </a>
           ))}
         </div>
-      </section>
-    </div>
+      </Section>
+
+      {/* Essays */}
+      <Section label="Essays" more={{ href: "/writing", text: "All essays" }}>
+        <div className="divide-y divide-line border-y border-line">
+          {featuredEssays.map((essay) => {
+            const inner = (
+              <>
+                <div className="flex items-baseline justify-between gap-4">
+                  <h3 className="text-[17px] font-medium tracking-tight text-ink text-balance">
+                    {essay.title}
+                  </h3>
+                  <span className="text-sm text-ink-muted whitespace-nowrap shrink-0 italic">
+                    {essay.date ?? "In progress"}
+                  </span>
+                </div>
+                <p className="mt-2 text-[15px] text-ink-muted leading-relaxed group-hover:text-ink-secondary transition-colors">
+                  {essay.hook}
+                </p>
+              </>
+            );
+            return essay.href ? (
+              <a
+                key={essay.title}
+                href={essay.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block py-6"
+              >
+                {inner}
+              </a>
+            ) : (
+              <div key={essay.title} className="group block py-6">
+                {inner}
+              </div>
+            );
+          })}
+        </div>
+      </Section>
+
+      {/* About */}
+      <Section label="About">
+        <div className="space-y-5 text-[17px] text-ink-secondary leading-relaxed">
+          <p>
+            I&apos;ve always been more interested in understanding systems
+            than headlines. Whether it&apos;s AI memory, market
+            infrastructure, or developer tools, I like figuring out why
+            something works before building on top of it.
+          </p>
+          <p>
+            Most of my time goes into building products, writing about what I
+            learn, and experimenting with what AI-first software should feel
+            like.
+          </p>
+        </div>
+        <Link
+          href="/about"
+          className="inline-block mt-6 text-sm text-ink-secondary hover:text-ink transition-colors underline underline-offset-4 decoration-line-strong hover:decoration-ink"
+        >
+          More about me
+        </Link>
+      </Section>
+
+      {/* Currently */}
+      <Section label="Currently">
+        <ul className="space-y-2.5">
+          {currently.items.map((item) => (
+            <li key={item} className="text-[15px] text-ink-secondary">
+              {item}
+            </li>
+          ))}
+          <li className="text-[15px] text-ink-muted pt-1">
+            {currently.location}
+          </li>
+        </ul>
+      </Section>
+
+      {/* Experience */}
+      <Section label="Experience">
+        <ol className="space-y-10">
+          {experience.map((role) => (
+            <li
+              key={role.company}
+              className="grid grid-cols-[7rem_1fr] sm:grid-cols-[9rem_1fr] gap-4"
+            >
+              <span className="text-sm text-ink-muted pt-0.5 whitespace-nowrap">
+                {role.period}
+              </span>
+              <div>
+                <p className="text-[15px] font-medium text-ink">
+                  {role.title},{" "}
+                  {role.href ? (
+                    <a
+                      href={role.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline underline-offset-4"
+                    >
+                      {role.company}
+                    </a>
+                  ) : (
+                    role.company
+                  )}
+                </p>
+                <p className="mt-1.5 text-[15px] text-ink-muted leading-relaxed">
+                  {role.story}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </Section>
+
+      {/* Open Source */}
+      <Section label="Open source">
+        <ul className="space-y-6">
+          {openSource.map((item) => (
+            <li key={item.name}>
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+              >
+                <p className="font-mono text-sm text-ink group-hover:underline underline-offset-4">
+                  {item.name}
+                </p>
+                <p className="mt-1 text-[15px] text-ink-muted leading-relaxed">
+                  {item.description}
+                </p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      {/* Contact */}
+      <Section id="contact" label="Contact">
+        <p className="text-[17px] text-ink-secondary leading-relaxed max-w-[52ch]">
+          Always happy to talk about AI systems, developer tools, or whatever
+          you&apos;re building. Email and X are the fastest ways to reach me.
+        </p>
+        <div className="mt-6 flex flex-wrap items-center gap-3">
+          <a
+            href={`mailto:${site.email}`}
+            className="inline-flex items-center h-10 px-5 rounded-full bg-ink text-[#fcfcfc] text-sm font-medium hover:bg-black transition-colors"
+          >
+            {site.email}
+          </a>
+          <a
+            href="https://x.com/0xrahul"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center h-10 px-5 rounded-full border border-line-strong text-sm font-medium text-ink hover:border-ink transition-colors"
+          >
+            @0xrahul
+          </a>
+        </div>
+      </Section>
+    </>
   );
 }

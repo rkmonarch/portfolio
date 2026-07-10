@@ -1,51 +1,54 @@
-import './globals.css';
-import React from 'react';
-import { Analytics } from '@vercel/analytics/next';
-import Nav from './components/NavBar';
-import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaMedium, FaTwitter } from 'react-icons/fa';
+import "./globals.css";
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import Nav from "@/components/nav";
+import Footer from "@/components/footer";
+import { site } from "@/lib/data";
 
-export const metadata = {
-  title: 'Rahul Kulkarni',
-  description: 'Builds on Solana • Security • Infrastructure • Movies & Trails',
-  icons: { icon: '/rk.jpg' },
+const geistSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
+});
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
+  title: {
+    default: `${site.name} — Building AI systems that feel simple`,
+    template: `%s — ${site.name}`,
+  },
+  description: site.description,
+  openGraph: {
+    title: site.name,
+    description: site.description,
+    url: site.url,
+    siteName: site.name,
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: site.name,
+    description: site.description,
+    creator: "@0xrahul",
+  },
+  icons: { icon: "/favicon.ico" },
 };
 
-const socials = [
-  { href: 'https://twitter.com/0xrahul', Icon: FaTwitter, label: 'Twitter' },
-  { href: 'https://github.com/rkmonarch', Icon: FaGithub, label: 'GitHub' },
-  { href: 'https://linkedin.com/in/0xrahul', Icon: FaLinkedin, label: 'LinkedIn' },
-  { href: 'mailto:rkweb3.00@gmail.com', Icon: FaEnvelope, label: 'Email' },
-  { href: 'https://instagram.com/rahulll.24', Icon: FaInstagram, label: 'Instagram' },
-  { href: 'https://medium.com/@rkmonarch', Icon: FaMedium, label: 'Medium' },
-];
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body className="antialiased min-h-screen flex flex-col">
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className="min-h-screen flex flex-col">
         <Nav />
-        <main className="flex-grow pt-16">{children}</main>
-        <footer className="border-t border-black/[0.06] mt-24">
-          <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-5">
-            <p className="text-sm text-[#9898b0]">
-              <span className="text-[#5c5c78] font-medium">Rahul Kulkarni</span> · {new Date().getFullYear()}
-            </p>
-            <div className="flex items-center gap-5">
-              {socials.map(({ href, Icon, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="text-[#9898b0] hover:text-[#7C3AED] transition-colors"
-                >
-                  <Icon size={15} />
-                </a>
-              ))}
-            </div>
-          </div>
-        </footer>
+        <main className="flex-grow w-full max-w-[680px] mx-auto px-6">
+          {children}
+        </main>
+        <Footer />
         <Analytics />
       </body>
     </html>
