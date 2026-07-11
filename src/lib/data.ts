@@ -120,11 +120,6 @@ export interface Essay {
 // In progress, shown as notebook entries until published.
 export const essaysInProgress: Essay[] = [
   {
-    title: "Context Is Becoming Infrastructure",
-    hook: "Prompts were the app layer. Context is turning into the platform layer, and it is starting to look like a database problem.",
-    featured: true,
-  },
-  {
     title: "The AI Stack Is Quietly Changing",
     hook: "The interesting shifts are not happening in the models. They are happening in everything wrapped around them.",
   },
@@ -135,6 +130,14 @@ export const essaysInProgress: Essay[] = [
 ];
 
 export const essays: Essay[] = [
+  {
+    title: "Context Is Becoming Infrastructure",
+    hook: "Prompts were the app layer. Context is turning into the platform layer, and it is starting to look like a database problem. Why context management will separate AI products as models become interchangeable.",
+    href: "https://medium.com/@rkmonarch/context-is-becoming-infrastructure-4518dfba382c",
+    date: "July 2026",
+    source: "Medium",
+    featured: true,
+  },
   {
     title: "AI Memory as the Real Moat",
     hook: "For two years everyone asked which model is smartest. The real question is becoming who remembers you best, and that is much harder to switch away from.",
