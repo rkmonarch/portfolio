@@ -13,8 +13,8 @@ import {
 export default function Home() {
   const featuredProjects = projects.filter((p) => p.featured);
   const featuredEssays = [
-    ...essaysInProgress.filter((e) => e.featured),
     ...essays.filter((e) => e.featured),
+    ...essaysInProgress.filter((e) => e.featured),
   ];
 
   return (

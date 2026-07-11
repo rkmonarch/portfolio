@@ -4,7 +4,7 @@ import { essays, essaysInProgress } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Essays",
   description:
-    "Essays on AI systems, memory, context, and the infrastructure underneath — plus earlier deep dives on Solana internals.",
+    "Essays on AI systems, memory, context, and the infrastructure underneath, plus earlier deep dives on Solana internals.",
 };
 
 export default function WritingPage() {
@@ -16,8 +16,8 @@ export default function WritingPage() {
         </h1>
         <p className="mt-4 text-lg text-ink-secondary leading-relaxed max-w-[52ch]">
           I write to understand things, then publish so the next person
-          starts further ahead. Right now that&apos;s mostly AI systems —
-          memory, context, agents. Before that, Solana internals.
+          starts further ahead. Right now that&apos;s mostly AI systems:
+          memory, context, and agents. Before that, Solana internals.
         </p>
       </header>
 
@@ -65,6 +65,7 @@ export default function WritingPage() {
                 </h2>
                 <span className="text-sm text-ink-muted whitespace-nowrap shrink-0">
                   {essay.date}
+                  {essay.source ? ` · ${essay.source}` : ""}
                 </span>
               </div>
               <p className="mt-2 text-[15px] text-ink-muted leading-relaxed group-hover:text-ink-secondary transition-colors">
@@ -84,6 +85,15 @@ export default function WritingPage() {
           className="text-ink-secondary hover:text-ink transition-colors underline underline-offset-4 decoration-line-strong hover:decoration-ink"
         >
           Medium
+        </a>{" "}
+        and{" "}
+        <a
+          href="https://x.com/0xrahul"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-ink-secondary hover:text-ink transition-colors underline underline-offset-4 decoration-line-strong hover:decoration-ink"
+        >
+          X
         </a>
         .
       </p>

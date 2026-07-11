@@ -16,7 +16,7 @@ const tools = [
   {
     area: "Products",
     detail:
-      "Full-stack web and mobile — TypeScript, Next.js, React Native — shipped to real users, not demos.",
+      "Full-stack web and mobile with TypeScript, Next.js, and React Native. Shipped to real users, not demos.",
   },
   {
     area: "Infrastructure",
@@ -47,8 +47,8 @@ export default function ResumePage() {
         </p>
         <p className="mt-3 text-lg text-ink-secondary leading-relaxed max-w-[54ch]">
           I enjoy turning complex systems into products that feel simple.
-          Founder of ClearSign; before that, I helped fifty-plus teams ship to
-          Solana mainnet as DevRel Lead at SOON SVM.
+          Founder of ClearSign. Before that I helped more than fifty teams
+          ship to Solana mainnet as DevRel Lead at SOON SVM.
         </p>
       </header>
 
@@ -94,15 +94,15 @@ export default function ResumePage() {
                 ClearSign
               </h2>
               <span className="text-sm text-ink-muted whitespace-nowrap">
-                2026 — now
+                Since 2026
               </span>
             </div>
             <p className="mt-3 text-[15px] text-ink-secondary leading-relaxed">
-              A policy-gated signing and intent verification layer for Solana
-              treasuries and AI agents, live on mainnet. Agents execute
-              on-chain transactions through human-readable verification,
-              policy controls, and anomaly detection — coordinated through
-              hashed, time-bound multi-signature proposals.
+              A signing and verification layer for Solana treasuries and AI
+              agents, live on mainnet. Agents run on-chain transactions
+              through plain language verification, policy checks, and anomaly
+              detection. Every proposal is hashed, time limited, and approved
+              by multiple signers.
             </p>
           </li>
           <li>
@@ -111,12 +111,12 @@ export default function ResumePage() {
                 Joule Finance
               </h2>
               <span className="text-sm text-ink-muted whitespace-nowrap">
-                2024 — 2025
+                2024 to 2025
               </span>
             </div>
             <p className="mt-3 text-[15px] text-ink-secondary leading-relaxed">
               Built the on-chain programs for an LRT bridge and money market
-              on Aptos — lending, borrowing, and cross-chain LST support via
+              on Aptos: lending, borrowing, and cross-chain LST support via
               Axelar.
             </p>
             <p className="mt-2 text-[15px] text-ink-muted leading-relaxed">
@@ -162,7 +162,7 @@ export default function ResumePage() {
       </section>
 
       <p className="mt-16 text-sm text-ink-muted">
-        References and details on request —{" "}
+        For references and details, write to{" "}
         <a
           href={`mailto:${site.email}`}
           className="text-ink-secondary hover:text-ink transition-colors underline underline-offset-4 decoration-line-strong hover:decoration-ink"

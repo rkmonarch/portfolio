@@ -28,7 +28,7 @@ export default function Nav() {
       >
         <Link
           href="/"
-          aria-label="Rahul Kulkarni — home"
+          aria-label="Rahul Kulkarni, home"
           className="text-sm font-semibold tracking-tight text-ink hover:text-ink-secondary transition-colors"
         >
           RK

@@ -26,14 +26,15 @@ export default function AboutPage() {
           Whether it&apos;s AI memory, market infrastructure, or developer
           tools, I enjoy figuring out why something works before building on
           top of it. Once you understand the architecture, most things stop
-          being magic — and the interesting problems become obvious.
+          being magic. Then the interesting problems become obvious.
         </p>
         <p>
           That habit shaped my path. I started as a software engineer
-          building scan-and-pay apps and supply-chain systems. Then three
-          years of developer relations — Fetcch, then SOON SVM — where I
-          explained systems to smart people every day. There&apos;s no faster
-          way to find out which parts you don&apos;t actually understand.
+          building scan and pay apps and supply chain systems. Then I spent
+          three years in developer relations, first at Fetcch and then at
+          SOON SVM, explaining systems to smart people every day.
+          There&apos;s no faster way to find out which parts you don&apos;t
+          actually understand.
         </p>
         <p>
           Now I&apos;m building{" "}
@@ -46,9 +47,9 @@ export default function AboutPage() {
             ClearSign
           </a>
           : agents that can move money, and a verification layer that makes
-          that safe. It&apos;s everything I care about in one product —
-          trust, autonomy, and complexity that disappears instead of leaking
-          into the interface.
+          that safe. It brings together everything I care about. Trust,
+          autonomy, and complexity that disappears instead of leaking into
+          the interface.
         </p>
         <p>
           Away from the keyboard: trails, and films I&apos;ve already seen

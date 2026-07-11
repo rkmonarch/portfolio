@@ -4,7 +4,7 @@ import { projects } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Things I've built",
   description:
-    "Products across AI agents, payments, privacy, and developer tools — and why each one exists.",
+    "Products across AI agents, payments, privacy, and developer tools, and why each one exists.",
 };
 
 export default function ProjectsPage() {
@@ -16,7 +16,7 @@ export default function ProjectsPage() {
         </h1>
         <p className="mt-4 text-lg text-ink-secondary leading-relaxed max-w-[52ch]">
           Each of these started as a question I couldn&apos;t let go of. The
-          short version of every answer is below — the code and the products
+          short version of every answer is below. The code and the products
           are a click away.
         </p>
       </header>
