@@ -30,14 +30,23 @@ export const metadata: Metadata = {
     url: site.url,
     siteName: site.name,
     type: "website",
+    images: [
+      {
+        url: "/1.jpeg",
+        width: 719,
+        height: 572,
+        alt: "Rahul Kulkarni speaking on stage at ETH KL",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: site.name,
     description: site.description,
     creator: "@0xrahul",
+    images: ["/1.jpeg"],
   },
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: "/icon.png", apple: "/icon.png" },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
