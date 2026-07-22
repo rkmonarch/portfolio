@@ -17,9 +17,8 @@ export const socials = [
 
 export const currently = {
   items: [
-    "Building ClearSign",
-    "Writing about AI memory",
-    "Learning graph databases",
+    "Lads - Building an AI-powered private fitness companion that helps close friends stay accountable and build healthier habits together.",
+    "60 users in private beta, 200+ activities, 3000+ mins of activities synced.",
   ],
   location: "Vadodara, India",
 };

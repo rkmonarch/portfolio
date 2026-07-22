@@ -33,16 +33,8 @@ export default function Home() {
         <div className="rise rise-2 mt-6 text-lg text-ink-secondary leading-relaxed">
           <p>I build products, explain systems, and write about AI and Crypto.</p>
           <p>
-            Currently building{" "}
-            <a
-              href="https://clearsign.fun"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-ink underline underline-offset-4 decoration-line-strong hover:decoration-ink transition-colors"
-            >
-              ClearSign
-            </a>
-            .
+            Currently building Lads, an AI-powered private fitness companion
+            for close friends.
           </p>
           <p>Previously DevRel Lead at SOON SVM.</p>
         </div>
