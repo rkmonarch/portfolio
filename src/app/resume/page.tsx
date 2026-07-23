@@ -47,7 +47,7 @@ export default function ResumePage() {
         </p>
         <p className="mt-3 text-lg text-ink-secondary leading-relaxed max-w-[54ch]">
           I enjoy turning complex systems into products that feel simple.
-          Founder of ClearSign. Before that I helped more than fifty teams
+          Currently building Lads. Before that I helped more than fifty teams
           ship to Solana mainnet as DevRel Lead at SOON SVM.
         </p>
       </header>
@@ -82,10 +82,10 @@ export default function ResumePage() {
         </ol>
       </section>
 
-      {/* Independent work */}
+      {/* Side projects */}
       <section className="mt-16 border-t border-line pt-10">
         <p className="text-[13px] font-medium text-ink-muted tracking-wide uppercase mb-8">
-          Independent work
+          Side projects
         </p>
         <ol className="space-y-12">
           <li>

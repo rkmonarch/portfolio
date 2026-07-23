@@ -1,6 +1,6 @@
 export const site = {
   name: "Rahul Kulkarni",
-  role: "Founder, ClearSign",
+  role: "Builder, Lads",
   email: "rkweb3.00@gmail.com",
   url: "https://www.rkmonarch.com",
   description:
@@ -18,7 +18,7 @@ export const socials = [
 export const currently = {
   items: [
     "Lads - Building an AI-powered private fitness companion that helps close friends stay accountable and build healthier habits together.",
-    "60 users in private beta, 200+ activities, 3000+ mins of activities synced.",
+    "50+ users in closed beta, with 200+ activities and 3000+ mins of activities synced.",
   ],
   location: "Vadodara, India",
 };
@@ -32,6 +32,14 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    name: "Lads",
+    tagline: "A private fitness companion for close friends.",
+    story:
+      "Currently building Lads in closed beta with 50+ users. It helps small friend groups stay accountable, sync activities, and get AI-powered fitness insights without turning health into a public feed.",
+    href: "https://joinlads.com",
+    featured: true,
+  },
   {
     name: "ClearSign",
     tagline: "Making AI agents safe enough to move money.",
@@ -244,12 +252,13 @@ export interface Role {
 
 export const experience: Role[] = [
   {
-    company: "ClearSign",
-    title: "Founder",
+    company: "Lads",
+    title: "Builder",
     period: "Since 2026",
     story:
-      "Building the layer that lets AI agents move money safely. Policy checks and plain language verification for Solana treasuries, live on mainnet.",
-    href: "https://clearsign.fun",
+      "Building an AI-powered private fitness companion for close friends. Lads helps small groups stay accountable, sync activities, and turn progress into useful coaching.",
+    metrics: "50+ users in closed beta, with 200+ activities and 3000+ mins of activities synced.",
+    href: "https://joinlads.com",
   },
   {
     company: "SOON SVM",

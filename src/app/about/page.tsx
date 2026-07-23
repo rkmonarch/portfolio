@@ -39,17 +39,16 @@ export default function AboutPage() {
         <p>
           Now I&apos;m building{" "}
           <a
-            href="https://clearsign.fun"
+            href="https://joinlads.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-ink underline underline-offset-4 decoration-line-strong hover:decoration-ink transition-colors"
           >
-            ClearSign
+            Lads
           </a>
-          : agents that can move money, and a verification layer that makes
-          that safe. It brings together everything I care about. Trust,
-          autonomy, and complexity that disappears instead of leaking into
-          the interface.
+          : an AI-powered private fitness companion for close friends. It
+          helps small groups stay accountable, sync activities, and turn
+          progress into useful coaching without making fitness a public feed.
         </p>
         <p>
           Away from the keyboard: trails, and films I&apos;ve already seen

@@ -34,7 +34,7 @@ export default function Home() {
           <p>I build products, explain systems, and write about AI and Crypto.</p>
           <p>
             Currently building Lads, an AI-powered private fitness companion
-            for close friends.
+            for close friends, with 50+ users in closed beta.
           </p>
           <p>Previously DevRel Lead at SOON SVM.</p>
         </div>
