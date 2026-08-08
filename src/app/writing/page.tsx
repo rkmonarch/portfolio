@@ -88,7 +88,7 @@ export default function WritingPage() {
         </a>{" "}
         and{" "}
         <a
-          href="https://x.com/0xrahul"
+          href="https://x.com/0xrahulk"
           target="_blank"
           rel="noopener noreferrer"
           className="text-ink-secondary hover:text-ink transition-colors underline underline-offset-4 decoration-line-strong hover:decoration-ink"

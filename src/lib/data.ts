@@ -8,7 +8,7 @@ export const site = {
 };
 
 export const socials = [
-  { label: "X", href: "https://x.com/0xrahul" },
+  { label: "X", href: "https://x.com/0xrahulk" },
   { label: "GitHub", href: "https://github.com/rkmonarch" },
   { label: "LinkedIn", href: "https://linkedin.com/in/0xrahul" },
   { label: "Medium", href: "https://medium.com/@rkmonarch" },
@@ -148,7 +148,7 @@ export const essays: Essay[] = [
   {
     title: "AI Memory as the Real Moat",
     hook: "For two years everyone asked which model is smartest. The real question is becoming who remembers you best, and that is much harder to switch away from.",
-    href: "https://x.com/0xrahul/status/2075491082260078775",
+    href: "https://x.com/0xrahulk/status/2075491082260078775",
     date: "July 2026",
     source: "X",
     featured: true,
@@ -156,14 +156,14 @@ export const essays: Essay[] = [
   {
     title: "Why Solana's New Subscriptions Program Matters",
     hook: "SPL delegation allows one delegate per token account, which quietly made recurring payments impossible. The new PDA model fixes that for SaaS, memberships, and AI agents.",
-    href: "https://x.com/0xrahul/status/2074738136824066345",
+    href: "https://x.com/0xrahulk/status/2074738136824066345",
     date: "July 2026",
     source: "X",
   },
   {
     title: "What Actually Makes GUM Feel Different",
     hook: "The best cross-chain UX makes the chains disappear while staying easy to inspect. Notes from the beta, and what really happens under the hood.",
-    href: "https://x.com/0xrahul/status/2074467721975312616",
+    href: "https://x.com/0xrahulk/status/2074467721975312616",
     date: "July 2026",
     source: "X",
   },
@@ -184,7 +184,7 @@ export const essays: Essay[] = [
   {
     title: "Why Most Solana DEXs Don't Use On-Chain Orderbooks",
     hook: "It is not a design choice. It is account locking, compute limits, and the transaction model. Why AMMs win on Solana and how perps actually work.",
-    href: "https://x.com/0xrahul/status/2007103800750866479",
+    href: "https://x.com/0xrahulk/status/2007103800750866479",
     date: "January 2026",
     source: "X",
     featured: true,
@@ -207,7 +207,7 @@ export const essays: Essay[] = [
   {
     title: "How DA, Sequencers, and Provers Fit Together",
     hook: "EigenDA and optimistic rollups explained as one system. Who orders transactions, who stores the data, who watches, and what happens when someone lies.",
-    href: "https://x.com/0xrahul/status/1873962885199896712",
+    href: "https://x.com/0xrahulk/status/1873962885199896712",
     date: "December 2024",
     source: "X",
   },

@@ -236,12 +236,12 @@ export default function Home() {
             {site.email}
           </a>
           <a
-            href="https://x.com/0xrahul"
+            href="https://x.com/0xrahulk"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center h-10 px-5 rounded-full border border-line-strong text-sm font-medium text-ink hover:border-ink transition-colors"
           >
-            @0xrahul
+            @0xrahulk
           </a>
         </div>
       </Section>
