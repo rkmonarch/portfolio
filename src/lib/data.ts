@@ -18,7 +18,7 @@ export const socials = [
 export const currently = {
   items: [
     "Lads - Building an AI-powered private fitness companion that helps close friends stay accountable and build healthier habits together.",
-    "50+ users in closed beta, with 200+ activities and 3000+ mins of activities synced.",
+    "500+ installs, with 200+ activities and 3000+ mins of activities synced.",
   ],
   location: "Vadodara, India",
 };
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     name: "Lads",
     tagline: "A private fitness companion for close friends.",
     story:
-      "Currently building Lads in closed beta with 50+ users. It helps small friend groups stay accountable, sync activities, and get AI-powered fitness insights without turning health into a public feed.",
+      "Currently building Lads, now past 500+ installs. It helps small friend groups stay accountable, sync activities, and get AI-powered fitness insights without turning health into a public feed.",
     href: "https://joinlads.com",
     featured: true,
   },
@@ -127,16 +127,40 @@ export interface Essay {
 // In progress, shown as notebook entries until published.
 export const essaysInProgress: Essay[] = [
   {
-    title: "The AI Stack Is Quietly Changing",
-    hook: "The interesting shifts are not happening in the models. They are happening in everything wrapped around them.",
-  },
-  {
     title: "The Future Doesn't Have Apps",
     hook: "When agents do the operating, the interface stops being the product. What software looks like after the app.",
   },
 ];
 
 export const essays: Essay[] = [
+  {
+    title: "Solana Is About to Make Inefficient Transactions Expensive",
+    hook: "SIMD-0553 changes Solana fees from flat signature costs to resource-based pricing. Why loose compute budgets could become a user-facing cost problem.",
+    href: "https://medium.com/@rkmonarch/solana-is-about-to-make-inefficient-transactions-expensive-1e994ae319a1",
+    date: "August 2026",
+    source: "Medium",
+  },
+  {
+    title: "AI Doesn't Have a Model Problem Anymore. It Has a Systems Problem.",
+    hook: "The models are capable enough for many products now. The hard part is building the retries, state, validation, observability, and recovery around them.",
+    href: "https://medium.com/@rkmonarch/ai-doesnt-have-a-model-problem-anymore-it-has-a-systems-problem-ac4eb67c9f57",
+    date: "August 2026",
+    source: "Medium",
+  },
+  {
+    title: "Google's Open Knowledge Format (OKF) Isn't Replacing RAG. It's Building the Layer Before It.",
+    hook: "OKF is not a replacement for RAG. It points to a knowledge layer before retrieval, where structure is captured once instead of rebuilt on every query.",
+    href: "https://medium.com/@rkmonarch/googles-open-knowledge-format-okf-isn-t-replacing-rag-it-s-building-the-layer-before-it-cb1114c2ef07",
+    date: "July 2026",
+    source: "Medium",
+  },
+  {
+    title: "The AI Stack Is Quietly Changing",
+    hook: "The interesting shifts are not happening in the models. They are happening in everything wrapped around them.",
+    href: "https://medium.com/@rkmonarch/the-ai-stack-is-quietly-changing-38062a6b2d52",
+    date: "July 2026",
+    source: "Medium",
+  },
   {
     title: "Context Is Becoming Infrastructure",
     hook: "Prompts were the app layer. Context is turning into the platform layer, and it is starting to look like a database problem. Why context management will separate AI products as models become interchangeable.",
@@ -257,7 +281,7 @@ export const experience: Role[] = [
     period: "Since 2026",
     story:
       "Building an AI-powered private fitness companion for close friends. Lads helps small groups stay accountable, sync activities, and turn progress into useful coaching.",
-    metrics: "50+ users in closed beta, with 200+ activities and 3000+ mins of activities synced.",
+    metrics: "500+ installs, with 200+ activities and 3000+ mins of activities synced.",
     href: "https://joinlads.com",
   },
   {
