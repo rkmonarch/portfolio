@@ -18,7 +18,7 @@ export const socials = [
 export const currently = {
   items: [
     "Lads - Building an AI-powered private fitness companion that helps close friends stay accountable and build healthier habits together.",
-    "500+ installs, with 200+ activities and 3000+ mins of activities synced.",
+    "500+ installs, with 880+ activities and 41200+ mins synced.",
   ],
   location: "Vadodara, India",
 };
@@ -281,7 +281,7 @@ export const experience: Role[] = [
     period: "Since 2026",
     story:
       "Building an AI-powered private fitness companion for close friends. Lads helps small groups stay accountable, sync activities, and turn progress into useful coaching.",
-    metrics: "500+ installs, with 200+ activities and 3000+ mins of activities synced.",
+    metrics: "500+ installs, with 880+ activities and 41200+ mins synced.",
     href: "https://joinlads.com",
   },
   {
