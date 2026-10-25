@@ -3,19 +3,65 @@ import { Section } from "@/components/section";
 import {
   site,
   projects,
+  currentWork,
   essays,
   essaysInProgress,
   experience,
-  openSource,
-  currently,
+  type Project,
 } from "@/lib/data";
 
+const experiencePreview = ["Stealth", "SOON SVM", "Fetcch"];
+
+function WorkRow({ project }: { project: Project }) {
+  const inner = (
+    <>
+      <div className="flex items-baseline justify-between gap-4">
+        <h3 className="text-lg font-semibold tracking-tight text-ink">
+          {project.name}
+        </h3>
+        {project.href && (
+          <span
+            aria-hidden
+            className="text-ink-muted group-hover:text-ink transition-colors text-sm"
+          >
+            ↗
+          </span>
+        )}
+      </div>
+      <p className="mt-1 text-ink-secondary">{project.tagline}</p>
+      <p className="mt-3 text-[15px] text-ink-muted leading-relaxed group-hover:text-ink-secondary transition-colors">
+        {project.summary ?? project.story}
+      </p>
+      {project.stack && (
+        <p className="mt-2 text-sm text-ink-muted leading-relaxed">
+          {project.stack}
+        </p>
+      )}
+    </>
+  );
+  return project.href ? (
+    <a
+      href={project.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block py-8"
+    >
+      {inner}
+    </a>
+  ) : (
+    <div className="group block py-8">{inner}</div>
+  );
+}
+
 export default function Home() {
-  const featuredProjects = projects.filter((p) => p.featured);
+  const selectedWork = [currentWork, ...projects.filter((p) => p.featured)];
   const featuredEssays = [
     ...essays.filter((e) => e.featured),
     ...essaysInProgress.filter((e) => e.featured),
   ];
+  const roles = experience.filter((r) =>
+    experiencePreview.includes(r.company)
+  );
 
   return (
     <>
@@ -28,16 +74,12 @@ export default function Home() {
           Builder · Engineer · Writer
         </p>
         <p className="rise rise-2 mt-10 text-xl sm:text-2xl font-medium tracking-tight leading-snug text-ink text-balance">
-          Building AI systems that make complex technology feel simple.
+          Software engineer building products across markets, crypto, and AI.
         </p>
-        <div className="rise rise-2 mt-6 text-lg text-ink-secondary leading-relaxed">
-          <p>I build products, explain systems, and write about AI and Crypto.</p>
-          <p>
-            Currently building Lads, an AI-powered private fitness companion
-            for close friends, now past 500+ installs.
-          </p>
-          <p>Previously DevRel Lead at SOON SVM.</p>
-        </div>
+        <p className="rise rise-2 mt-6 text-lg text-ink-secondary leading-relaxed">
+          Currently building trading infrastructure for a stealth derivatives
+          startup.
+        </p>
         <div className="rise rise-3 mt-10 flex flex-wrap items-center gap-3">
           <Link
             href="/projects"
@@ -54,36 +96,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Things I've built */}
+      {/* Selected work */}
       <Section
-        label="Things I've built"
+        label="Selected work"
         more={{ href: "/projects", text: "Everything I've built" }}
       >
         <div className="divide-y divide-line border-y border-line">
-          {featuredProjects.map((project) => (
-            <a
-              key={project.name}
-              href={project.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block py-8"
-            >
-              <div className="flex items-baseline justify-between gap-4">
-                <h3 className="text-lg font-semibold tracking-tight text-ink">
-                  {project.name}
-                </h3>
-                <span
-                  aria-hidden
-                  className="text-ink-muted group-hover:text-ink transition-colors text-sm"
-                >
-                  ↗
-                </span>
-              </div>
-              <p className="mt-1 text-ink-secondary">{project.tagline}</p>
-              <p className="mt-3 text-[15px] text-ink-muted leading-relaxed group-hover:text-ink-secondary transition-colors">
-                {project.story}
-              </p>
-            </a>
+          {selectedWork.map((project) => (
+            <WorkRow key={project.name} project={project} />
           ))}
         </div>
       </Section>
@@ -127,46 +147,23 @@ export default function Home() {
       </Section>
 
       {/* About */}
-      <Section label="About">
-        <div className="space-y-5 text-[17px] text-ink-secondary leading-relaxed">
-          <p>
-            I&apos;ve always been more interested in understanding systems
-            than headlines. Whether it&apos;s AI memory, market
-            infrastructure, or developer tools, I like figuring out why
-            something works before building on top of it.
-          </p>
-          <p>
-            Most of my time goes into building products, writing about what I
-            learn, and experimenting with what AI-first software should feel
-            like.
-          </p>
-        </div>
-        <Link
-          href="/about"
-          className="inline-block mt-6 text-sm text-ink-secondary hover:text-ink transition-colors underline underline-offset-4 decoration-line-strong hover:decoration-ink"
-        >
-          More about me
-        </Link>
-      </Section>
-
-      {/* Currently */}
-      <Section label="Currently">
-        <ul className="space-y-2.5">
-          {currently.items.map((item) => (
-            <li key={item} className="text-[15px] text-ink-secondary">
-              {item}
-            </li>
-          ))}
-          <li className="text-[15px] text-ink-muted pt-1">
-            {currently.location}
-          </li>
-        </ul>
+      <Section label="About" more={{ href: "/about", text: "More about me" }}>
+        <p className="text-[17px] text-ink-secondary leading-relaxed">
+          I like building products that sit close to the infrastructure. My
+          work has moved from mobile apps to crypto, developer tools, AI
+          systems, and now trading infrastructure. I&apos;d rather understand
+          how a system actually works and ship something real on top of it
+          than stay inside one category.
+        </p>
       </Section>
 
       {/* Experience */}
-      <Section label="Experience">
-        <ol className="space-y-10">
-          {experience.map((role) => (
+      <Section
+        label="Experience"
+        more={{ href: "/resume", text: "Full resume" }}
+      >
+        <ol className="space-y-4">
+          {roles.map((role) => (
             <li
               key={role.company}
               className="grid grid-cols-[7rem_1fr] sm:grid-cols-[9rem_1fr] gap-4"
@@ -174,58 +171,30 @@ export default function Home() {
               <span className="text-sm text-ink-muted pt-0.5 whitespace-nowrap">
                 {role.period}
               </span>
-              <div>
-                <p className="text-[15px] font-medium text-ink">
-                  {role.title},{" "}
-                  {role.href ? (
-                    <a
-                      href={role.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:underline underline-offset-4"
-                    >
-                      {role.company}
-                    </a>
-                  ) : (
-                    role.company
-                  )}
-                </p>
-                <p className="mt-1.5 text-[15px] text-ink-muted leading-relaxed">
-                  {role.story}
-                </p>
-              </div>
+              <p className="text-[15px] font-medium text-ink">
+                {role.title},{" "}
+                {role.href ? (
+                  <a
+                    href={role.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline underline-offset-4"
+                  >
+                    {role.company}
+                  </a>
+                ) : (
+                  role.company
+                )}
+              </p>
             </li>
           ))}
         </ol>
       </Section>
 
-      {/* Open Source */}
-      <Section label="Open source">
-        <ul className="space-y-6">
-          {openSource.map((item) => (
-            <li key={item.name}>
-              <a
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block"
-              >
-                <p className="font-mono text-sm text-ink group-hover:underline underline-offset-4">
-                  {item.name}
-                </p>
-                <p className="mt-1 text-[15px] text-ink-muted leading-relaxed">
-                  {item.description}
-                </p>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </Section>
-
       {/* Contact */}
       <Section id="contact" label="Contact">
         <p className="text-[17px] text-ink-secondary leading-relaxed max-w-[52ch]">
-          Always happy to talk about AI systems, developer tools, or whatever
+          Always happy to talk about trading systems, AI, crypto, or whatever
           you&apos;re building. Email and X are the fastest ways to reach me.
         </p>
         <div className="mt-6 flex flex-wrap items-center gap-3">

@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} · Building AI systems that feel simple`,
+    default: `${site.name} · Software engineer across markets, crypto, and AI`,
     template: `%s · ${site.name}`,
   },
   description: site.description,

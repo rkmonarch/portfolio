@@ -4,7 +4,7 @@ import { site, experience, recognition } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Resume",
   description:
-    "Builder focused on AI, developer tools, and crypto infrastructure.",
+    "Software engineer building products across markets, crypto, and AI.",
 };
 
 const tools = [
@@ -21,7 +21,7 @@ const tools = [
   {
     area: "Infrastructure",
     detail:
-      "On-chain programs and SDKs across Solana, Ethereum, and Aptos, in Rust, Move, and Solidity.",
+      "On-chain programs, indexers, and SDKs across Solana, Ethereum, Base, and Aptos, in Rust, Move, Solidity, and Go.",
   },
 ];
 
@@ -43,12 +43,12 @@ export default function ResumePage() {
           </a>
         </div>
         <p className="mt-6 text-xl text-ink leading-relaxed font-medium tracking-tight text-balance">
-          Builder focused on AI, developer tools, and crypto infrastructure.
+          Software engineer building products across markets, crypto, and AI.
         </p>
         <p className="mt-3 text-lg text-ink-secondary leading-relaxed max-w-[54ch]">
-          I enjoy turning complex systems into products that feel simple.
-          Currently building Lads. Before that I helped more than fifty teams
-          ship to Solana mainnet as DevRel Lead at SOON SVM.
+          Currently building trading infrastructure for a stealth derivatives
+          startup, and building Lads on the side. Before that I helped more
+          than fifty teams ship to Solana mainnet as DevRel Lead at SOON SVM.
         </p>
       </header>
 
@@ -72,6 +72,19 @@ export default function ResumePage() {
               <p className="mt-3 text-[15px] text-ink-secondary leading-relaxed">
                 {role.story}
               </p>
+              {role.details?.map((detail) => (
+                <p
+                  key={detail}
+                  className="mt-3 text-[15px] text-ink-secondary leading-relaxed"
+                >
+                  {detail}
+                </p>
+              ))}
+              {role.stack && (
+                <p className="mt-2 text-[15px] text-ink-muted leading-relaxed">
+                  {role.stack}
+                </p>
+              )}
               {role.metrics && (
                 <p className="mt-2 text-[15px] text-ink-muted leading-relaxed">
                   {role.metrics}

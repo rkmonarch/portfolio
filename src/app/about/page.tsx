@@ -37,7 +37,13 @@ export default function AboutPage() {
           actually understand.
         </p>
         <p>
-          Now I&apos;m building{" "}
+          Now I&apos;m building trading infrastructure for a stealth
+          derivatives startup: an options platform with on-chain custody and
+          an off-chain order book. Most of my days go into order execution,
+          market data, settlement, and the on-chain systems underneath.
+        </p>
+        <p>
+          On the side I&apos;m building{" "}
           <a
             href="https://joinlads.com"
             target="_blank"
@@ -58,10 +64,10 @@ export default function AboutPage() {
 
       <figure className="mt-14">
         <Image
-          src="/1.jpeg"
-          alt="Rahul Kulkarni speaking at ETH KL"
-          width={680}
-          height={510}
+          src="/solana-summit.png"
+          alt="Rahul Kulkarni speaking at Solana Summit"
+          width={400}
+          height={400}
           className="w-full rounded-xl border border-line object-cover"
         />
       </figure>

@@ -1,10 +1,10 @@
 export const site = {
   name: "Rahul Kulkarni",
-  role: "Builder, Lads",
+  role: "Software Engineer",
   email: "rkweb3.00@gmail.com",
   url: "https://www.rkmonarch.com",
   description:
-    "I build AI products, explain complex systems, and write about what AI-first software should feel like.",
+    "Software engineer building products across markets, crypto, and AI. Currently building trading infrastructure for a stealth derivatives startup.",
 };
 
 export const socials = [
@@ -17,6 +17,7 @@ export const socials = [
 
 export const currently = {
   items: [
+    "Stealth - Building options trading infrastructure for a derivatives startup: order execution, market data, settlement, and on-chain systems.",
     "Lads - Building an AI-powered private fitness companion that helps close friends stay accountable and build healthier habits together.",
     "500+ installs, with 880+ activities and 41200+ mins synced.",
   ],
@@ -27,9 +28,20 @@ export interface Project {
   name: string;
   tagline: string;
   story: string;
-  href: string;
+  summary?: string; // shorter story for the homepage
+  stack?: string;
+  href?: string;
   featured?: boolean;
 }
+
+// Current work, shown first under Selected work on the homepage.
+export const currentWork: Project = {
+  name: "Options Trading Infrastructure",
+  tagline: "Stealth · 2026",
+  story:
+    "Building an options trading platform with on-chain custody and off-chain execution. Working across market data, limit orders, matching and fills, positions, collateral, settlement, and payouts.",
+  stack: "TypeScript, React, Convex, Go, Solidity, Base, Chainlink, GCP",
+};
 
 export const projects: Project[] = [
   {
@@ -37,6 +49,8 @@ export const projects: Project[] = [
     tagline: "A private fitness companion for close friends.",
     story:
       "Currently building Lads, now past 500+ installs. It helps small friend groups stay accountable, sync activities, and get AI-powered fitness insights without turning health into a public feed.",
+    summary:
+      "Helps small friend groups stay accountable, sync activities, and get AI-powered fitness insights without turning health into a public feed. Past 500+ installs.",
     href: "https://joinlads.com",
     featured: true,
   },
@@ -45,6 +59,8 @@ export const projects: Project[] = [
     tagline: "Making AI agents safe enough to move money.",
     story:
       "AI agents can already move money, but nothing checks if a transaction matches what you actually asked for. ClearSign reads every transaction and explains it in plain language before it gets signed. If something breaks your rules, it gets blocked. Live on Solana mainnet.",
+    summary:
+      "Reads every transaction an AI agent wants to sign, explains it in plain language, and blocks anything that breaks your rules. Live on Solana mainnet.",
     href: "https://clearsign.fun",
     featured: true,
   },
@@ -54,13 +70,14 @@ export const projects: Project[] = [
     story:
       "Every popular authenticator asks you to trust someone's cloud with the keys to your accounts. Fidel keeps your 2FA secrets on your device, encrypted, and syncs them between your devices directly. The right amount of infrastructure for 2FA is zero.",
     href: "https://github.com/rkmonarch/fidel",
-    featured: true,
   },
   {
     name: "Shuffles",
     tagline: "Crypto trading that fits in your pocket.",
     story:
       "Most trading apps assume a desktop and a power user. Shuffles routes trades across seven networks behind one interface, so you can find a token, swap it, and settle with one hand on your phone.",
+    summary:
+      "Routes trades across seven networks behind one mobile interface, so you can find a token, swap it, and settle with one hand.",
     href: "https://shuffles.xyz",
     featured: true,
   },
@@ -139,6 +156,7 @@ export const essays: Essay[] = [
     href: "https://medium.com/@rkmonarch/solana-is-about-to-make-inefficient-transactions-expensive-1e994ae319a1",
     date: "August 2026",
     source: "Medium",
+    featured: true,
   },
   {
     title: "AI Doesn't Have a Model Problem Anymore. It Has a Systems Problem.",
@@ -146,6 +164,7 @@ export const essays: Essay[] = [
     href: "https://medium.com/@rkmonarch/ai-doesnt-have-a-model-problem-anymore-it-has-a-systems-problem-ac4eb67c9f57",
     date: "August 2026",
     source: "Medium",
+    featured: true,
   },
   {
     title: "Google's Open Knowledge Format (OKF) Isn't Replacing RAG. It's Building the Layer Before It.",
@@ -167,7 +186,6 @@ export const essays: Essay[] = [
     href: "https://medium.com/@rkmonarch/context-is-becoming-infrastructure-4518dfba382c",
     date: "July 2026",
     source: "Medium",
-    featured: true,
   },
   {
     title: "AI Memory as the Real Moat",
@@ -175,7 +193,6 @@ export const essays: Essay[] = [
     href: "https://x.com/0xrahulk/status/2075491082260078775",
     date: "July 2026",
     source: "X",
-    featured: true,
   },
   {
     title: "Why Solana's New Subscriptions Program Matters",
@@ -219,7 +236,6 @@ export const essays: Essay[] = [
     href: "https://medium.com/@rkmonarch/from-probability-to-determinism-the-new-transaction-execution-stack-on-solana-48f4146648a9",
     date: "December 2025",
     source: "Medium",
-    featured: true,
   },
   {
     title: "Why Compute Units Matter on Solana",
@@ -271,10 +287,25 @@ export interface Role {
   period: string;
   story: string;
   metrics?: string;
+  details?: string[];
+  stack?: string;
   href?: string;
 }
 
 export const experience: Role[] = [
+  {
+    company: "Stealth",
+    title: "Options Trading Infrastructure",
+    period: "Since 2026",
+    story:
+      "Building an options trading platform with on-chain custody and an off-chain central limit order book.",
+    details: [
+      "Working across the trading lifecycle: deposits and withdrawals, market data, limit orders, matching and fills, positions, collateral accounting, expiry, settlement, and payouts.",
+      "Custody sits in on-chain vaults, while execution and accounting stay off-chain for faster order placement and capital-efficient markets. Liquidity is bootstrapped through an automated dealer quoting system, with risk and hedging designed around net portfolio exposure rather than hedging every position on its own.",
+      "Also building the infrastructure around it: blockchain indexers, oracle-driven settlement, payout workers, and the customer trading experience.",
+    ],
+    stack: "TypeScript, React, Convex, Go, Solidity, Base, Chainlink, GCP",
+  },
   {
     company: "Lads",
     title: "Builder",
