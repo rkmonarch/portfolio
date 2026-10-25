@@ -10,7 +10,7 @@ import {
   type Project,
 } from "@/lib/data";
 
-const experiencePreview = ["Stealth", "SOON SVM", "Fetcch"];
+const experiencePreview = ["Stealth Derivatives Startup", "SOON SVM", "Fetcch"];
 
 function WorkRow({ project }: { project: Project }) {
   const inner = (
@@ -70,10 +70,7 @@ export default function Home() {
         <h1 className="rise rise-1 text-[clamp(2.25rem,7vw,3.5rem)] font-semibold tracking-tight leading-[1.05] text-ink">
           Rahul Kulkarni
         </h1>
-        <p className="rise rise-1 mt-4 text-base text-ink-muted">
-          Builder · Engineer · Writer
-        </p>
-        <p className="rise rise-2 mt-10 text-xl sm:text-2xl font-medium tracking-tight leading-snug text-ink text-balance">
+        <p className="rise rise-2 mt-6 text-xl sm:text-2xl font-medium tracking-tight leading-snug text-ink text-balance">
           Software engineer building products across markets, crypto, and AI.
         </p>
         <p className="rise rise-2 mt-6 text-lg text-ink-secondary leading-relaxed">

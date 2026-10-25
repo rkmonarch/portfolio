@@ -37,9 +37,9 @@ export interface Project {
 // Current work, shown first under Selected work on the homepage.
 export const currentWork: Project = {
   name: "Options Trading Infrastructure",
-  tagline: "Stealth · 2026",
+  tagline: "Stealth · Present",
   story:
-    "Building an options trading platform with on-chain custody and off-chain execution. Working across market data, limit orders, matching and fills, positions, collateral, settlement, and payouts.",
+    "Building an options trading platform with on-chain custody and off-chain execution across market data, order execution, positions, collateral, settlement, and payouts.",
   stack: "TypeScript, React, Convex, Go, Solidity, Base, Chainlink, GCP",
 };
 
@@ -48,9 +48,9 @@ export const projects: Project[] = [
     name: "Lads",
     tagline: "A private fitness companion for close friends.",
     story:
-      "Currently building Lads, now past 500+ installs. It helps small friend groups stay accountable, sync activities, and get AI-powered fitness insights without turning health into a public feed.",
+      "Currently building Lads, now at 500+ installs. It helps small friend groups stay accountable, sync activities, and get AI-powered fitness insights without turning health into a public feed.",
     summary:
-      "Helps small friend groups stay accountable, sync activities, and get AI-powered fitness insights without turning health into a public feed. Past 500+ installs.",
+      "Helps small friend groups stay accountable, sync activities, and get AI-powered fitness insights without turning health into a public feed. 500+ installs.",
     href: "https://joinlads.com",
     featured: true,
   },
@@ -294,8 +294,8 @@ export interface Role {
 
 export const experience: Role[] = [
   {
-    company: "Stealth",
-    title: "Options Trading Infrastructure",
+    company: "Stealth Derivatives Startup",
+    title: "Software Engineer",
     period: "Since 2026",
     story:
       "Building an options trading platform with on-chain custody and an off-chain central limit order book.",
