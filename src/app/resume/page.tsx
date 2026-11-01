@@ -104,6 +104,31 @@ export default function ResumePage() {
           <li>
             <div className="flex items-baseline justify-between gap-4">
               <h2 className="text-[17px] font-semibold tracking-tight text-ink">
+                <a
+                  href="https://joinlads.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline underline-offset-4"
+                >
+                  Lads
+                </a>
+              </h2>
+              <span className="text-sm text-ink-muted whitespace-nowrap">
+                Since 2026
+              </span>
+            </div>
+            <p className="mt-3 text-[15px] text-ink-secondary leading-relaxed">
+              An AI-powered private fitness companion for close friends. Lads
+              helps small groups stay accountable, sync activities, and turn
+              progress into useful coaching.
+            </p>
+            <p className="mt-2 text-[15px] text-ink-muted leading-relaxed">
+              500+ installs, with 880+ activities and 41200+ mins synced.
+            </p>
+          </li>
+          <li>
+            <div className="flex items-baseline justify-between gap-4">
+              <h2 className="text-[17px] font-semibold tracking-tight text-ink">
                 ClearSign
               </h2>
               <span className="text-sm text-ink-muted whitespace-nowrap">
