@@ -71,8 +71,7 @@ export default function Home() {
           Software engineer building products across markets, crypto, and AI.
         </p>
         <p className="rise rise-2 mt-6 text-lg text-ink-secondary leading-relaxed">
-          Based in Vadodara, India. I build things, then write about how they
-          actually work.
+          I build things, then write about how they actually work.
         </p>
         <div className="rise rise-3 mt-10 flex flex-wrap items-center gap-3">
           <Link
