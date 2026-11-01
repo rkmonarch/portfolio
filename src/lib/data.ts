@@ -316,15 +316,6 @@ export const experience: Role[] = [
     stack: "TypeScript, React, Convex, Go, Solidity, Base, Chainlink, GCP",
   },
   {
-    company: "Lads",
-    title: "Builder",
-    period: "Since 2026",
-    story:
-      "Building an AI-powered private fitness companion for close friends. Lads helps small groups stay accountable, sync activities, and turn progress into useful coaching.",
-    metrics: "500+ installs, with 880+ activities and 41200+ mins synced.",
-    href: "https://joinlads.com",
-  },
-  {
     company: "SOON SVM",
     title: "DevRel Lead & AI Ecosystem Architect",
     period: "2024 to 2026",
