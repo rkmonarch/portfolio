@@ -151,6 +151,13 @@ export const essaysInProgress: Essay[] = [
 
 export const essays: Essay[] = [
   {
+    title: "Solana Is Fast Enough That Geography Now Matters",
+    hook: "At ~200ms slots, a far-away next leader can eat half the slot budget. SIMD-0675 groups nearby validators in the leader schedule, and the tradeoff is how much locality to add before resilience suffers.",
+    href: "https://x.com/0xrahulk/status/2116505465689625015",
+    date: "October 2026",
+    source: "X",
+  },
+  {
     title: "Solana Is About to Make Inefficient Transactions Expensive",
     hook: "SIMD-0553 changes Solana fees from flat signature costs to resource-based pricing. Why loose compute budgets could become a user-facing cost problem.",
     href: "https://medium.com/@rkmonarch/solana-is-about-to-make-inefficient-transactions-expensive-1e994ae319a1",
