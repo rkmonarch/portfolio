@@ -47,8 +47,9 @@ export default function ResumePage() {
         </p>
         <p className="mt-3 text-lg text-ink-secondary leading-relaxed max-w-[54ch]">
           Currently building trading infrastructure for a stealth derivatives
-          startup, and building Lads on the side. Before that I helped more
-          than fifty teams ship to Solana mainnet as DevRel Lead at SOON SVM.
+          startup, and building Lads on the side. Before that I was DevRel Lead
+          at SOON SVM, where I helped more than fifty teams ship to SOON
+          mainnet across our SOON Stack chains.
         </p>
       </header>
 

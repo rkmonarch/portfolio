@@ -319,9 +319,9 @@ export const experience: Role[] = [
     company: "SOON SVM",
     title: "DevRel Lead & AI Ecosystem Architect",
     period: "2024 to 2026",
-    note: "Helped 50+ teams ship to mainnet. 60M+ transactions across them.",
+    note: "Helped 50+ teams ship to SOON mainnet. 60M+ transactions across them.",
     story:
-      "Helped more than fifty teams ship to mainnet and ran the internet capital markets push on decoupled SVM infrastructure. Wrote twenty-five deep dives along the way.",
+      "Helped more than fifty teams ship to SOON mainnet across our SOON Stack chains, and ran the internet capital markets push on decoupled SVM infrastructure. Wrote twenty-five deep dives along the way.",
     metrics: "60M+ transactions and $300M+ in volume across supported projects.",
     href: "https://x.com/soon_svm",
   },
