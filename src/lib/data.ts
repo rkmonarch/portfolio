@@ -303,7 +303,7 @@ export interface Role {
 export const experience: Role[] = [
   {
     company: "Stealth Derivatives Startup",
-    title: "Software Engineer",
+    title: "Senior Fullstack Blockchain Developer",
     period: "Since 2026",
     note: "Options trading with on-chain custody and an off-chain order book.",
     story:
