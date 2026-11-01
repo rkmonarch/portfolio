@@ -156,6 +156,7 @@ export const essays: Essay[] = [
     href: "https://x.com/0xrahulk/status/2116505465689625015",
     date: "October 2026",
     source: "X",
+    featured: true,
   },
   {
     title: "Solana Is About to Make Inefficient Transactions Expensive",
