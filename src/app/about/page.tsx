@@ -64,10 +64,10 @@ export default function AboutPage() {
 
       <figure className="mt-14">
         <Image
-          src="/solana-summit.png"
-          alt="Rahul Kulkarni speaking at Solana Summit"
-          width={400}
-          height={400}
+          src="/ramen.jpg"
+          alt="Rahul Kulkarni eating ramen with chopsticks"
+          width={884}
+          height={825}
           className="w-full rounded-xl border border-line object-cover"
         />
       </figure>
