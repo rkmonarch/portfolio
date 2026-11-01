@@ -236,7 +236,6 @@ export const essays: Essay[] = [
     href: "https://x.com/0xrahulk/status/2007103800750866479",
     date: "January 2026",
     source: "X",
-    featured: true,
   },
   {
     title: "From Probability to Determinism",
@@ -295,6 +294,7 @@ export interface Role {
   period: string;
   story: string;
   metrics?: string;
+  note?: string; // one line shown on the homepage
   details?: string[];
   stack?: string;
   href?: string;
@@ -305,6 +305,7 @@ export const experience: Role[] = [
     company: "Stealth Derivatives Startup",
     title: "Software Engineer",
     period: "Since 2026",
+    note: "Options trading with on-chain custody and an off-chain order book.",
     story:
       "Building an options trading platform with on-chain custody and an off-chain central limit order book.",
     details: [
@@ -327,6 +328,7 @@ export const experience: Role[] = [
     company: "SOON SVM",
     title: "DevRel Lead & AI Ecosystem Architect",
     period: "2024 to 2026",
+    note: "Helped 50+ teams ship to mainnet. 60M+ transactions across them.",
     story:
       "Helped more than fifty teams ship to mainnet and ran the internet capital markets push on decoupled SVM infrastructure. Wrote twenty-five deep dives along the way.",
     metrics: "60M+ transactions and $300M+ in volume across supported projects.",
@@ -336,6 +338,7 @@ export const experience: Role[] = [
     company: "Solana Labs",
     title: "Solana Fellow",
     period: "2024",
+    note: "Built CLI tooling and SPL token libraries.",
     story:
       "Picked for the Solana Foundation fellowship. Built CLI tooling and SPL token libraries, the unglamorous pieces every developer touches.",
     href: "https://x.com/solana",

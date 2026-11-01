@@ -30,21 +30,12 @@ export const metadata: Metadata = {
     url: site.url,
     siteName: site.name,
     type: "website",
-    images: [
-      {
-        url: "/solana-summit.png",
-        width: 400,
-        height: 400,
-        alt: "Rahul Kulkarni speaking at Solana Summit",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: site.name,
     description: site.description,
     creator: "@0xrahulk",
-    images: ["/solana-summit.png"],
   },
   icons: { icon: "/solana-summit.png", apple: "/solana-summit.png" },
 };

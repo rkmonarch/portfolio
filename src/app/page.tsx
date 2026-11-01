@@ -10,7 +10,11 @@ import {
   type Project,
 } from "@/lib/data";
 
-const experiencePreview = ["Stealth Derivatives Startup", "SOON SVM", "Fetcch"];
+const experiencePreview = [
+  "Stealth Derivatives Startup",
+  "SOON SVM",
+  "Solana Labs",
+];
 
 function WorkRow({ project }: { project: Project }) {
   const inner = (
@@ -32,11 +36,6 @@ function WorkRow({ project }: { project: Project }) {
       <p className="mt-3 text-[15px] text-ink-muted leading-relaxed group-hover:text-ink-secondary transition-colors">
         {project.summary ?? project.story}
       </p>
-      {project.stack && (
-        <p className="mt-2 text-sm text-ink-muted leading-relaxed">
-          {project.stack}
-        </p>
-      )}
     </>
   );
   return project.href ? (
@@ -59,9 +58,7 @@ export default function Home() {
     ...essays.filter((e) => e.featured),
     ...essaysInProgress.filter((e) => e.featured),
   ];
-  const roles = experience.filter((r) =>
-    experiencePreview.includes(r.company)
-  );
+  const roles = experience.filter((r) => experiencePreview.includes(r.company));
 
   return (
     <>
@@ -74,8 +71,8 @@ export default function Home() {
           Software engineer building products across markets, crypto, and AI.
         </p>
         <p className="rise rise-2 mt-6 text-lg text-ink-secondary leading-relaxed">
-          Currently building trading infrastructure for a stealth derivatives
-          startup.
+          Based in Vadodara, India. I build things, then write about how they
+          actually work.
         </p>
         <div className="rise rise-3 mt-10 flex flex-wrap items-center gap-3">
           <Link
@@ -84,12 +81,12 @@ export default function Home() {
           >
             Things I&apos;ve built
           </Link>
-          <Link
-            href="/writing"
+          <a
+            href="#contact"
             className="inline-flex items-center h-10 px-5 rounded-full border border-line-strong text-sm font-medium text-ink hover:border-ink transition-colors"
           >
-            Read essays
-          </Link>
+            Get in touch
+          </a>
         </div>
       </section>
 
@@ -146,11 +143,15 @@ export default function Home() {
       {/* About */}
       <Section label="About" more={{ href: "/about", text: "More about me" }}>
         <p className="text-[17px] text-ink-secondary leading-relaxed">
-          I like building products that sit close to the infrastructure. My
-          work has moved from mobile apps to crypto, developer tools, AI
-          systems, and now trading infrastructure. I&apos;d rather understand
-          how a system actually works and ship something real on top of it
-          than stay inside one category.
+          I like building products that sit close to the infrastructure. My work
+          has moved from mobile apps to crypto, developer tools, AI systems, and
+          now trading infrastructure. I&apos;d rather understand how a system
+          actually works and ship something real on top of it than stay inside
+          one category.
+        </p>
+        <p className="mt-4 text-[17px] text-ink-secondary leading-relaxed">
+          Along the way: Solana Foundation Fellow, 25+ hackathon wins, and 30+
+          talks at events like ETH KL and DogeCon.
         </p>
       </Section>
 
@@ -168,21 +169,28 @@ export default function Home() {
               <span className="text-sm text-ink-muted pt-0.5 whitespace-nowrap">
                 {role.period}
               </span>
-              <p className="text-[15px] font-medium text-ink">
-                {role.title},{" "}
-                {role.href ? (
-                  <a
-                    href={role.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline underline-offset-4"
-                  >
-                    {role.company}
-                  </a>
-                ) : (
-                  role.company
+              <div>
+                <p className="text-[15px] font-medium text-ink">
+                  {role.title},{" "}
+                  {role.href ? (
+                    <a
+                      href={role.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline underline-offset-4"
+                    >
+                      {role.company}
+                    </a>
+                  ) : (
+                    role.company
+                  )}
+                </p>
+                {role.note && (
+                  <p className="mt-1 text-sm text-ink-muted leading-relaxed">
+                    {role.note}
+                  </p>
                 )}
-              </p>
+              </div>
             </li>
           ))}
         </ol>
