@@ -1,7 +1,7 @@
 export const site = {
   name: "Rahul Kulkarni",
   role: "Software Engineer",
-  email: "rkweb3.00@gmail.com",
+  email: "rahul@rkmonarch.com",
   url: "https://www.rkmonarch.com",
   description:
     "Software engineer building products across markets, crypto, and AI. Currently building trading infrastructure for a stealth derivatives startup.",
@@ -12,7 +12,7 @@ export const socials = [
   { label: "GitHub", href: "https://github.com/rkmonarch" },
   { label: "LinkedIn", href: "https://linkedin.com/in/0xrahul" },
   { label: "Medium", href: "https://medium.com/@rkmonarch" },
-  { label: "Email", href: "mailto:rkweb3.00@gmail.com" },
+  { label: "Email", href: "mailto:rahul@rkmonarch.com" },
 ];
 
 export const currently = {
