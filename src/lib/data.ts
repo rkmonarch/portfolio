@@ -151,6 +151,14 @@ export const essaysInProgress: Essay[] = [
 
 export const essays: Essay[] = [
   {
+    title: "Solana Programs Could Soon Do 16 Things at Once",
+    hook: "SIMD-0714 proposes AVX-512-style vector instructions for the SVM. Early benchmarks show an int8 neural net dropping from ~490k to ~2.1k CU, and the bigger shift is fewer algorithms needing their own syscall.",
+    href: "https://x.com/0xrahulk/status/2118319924846194801",
+    date: "November 2026",
+    source: "X",
+    featured: true,
+  },
+  {
     title: "Solana Is Fast Enough That Geography Now Matters",
     hook: "At ~200ms slots, a far-away next leader can eat half the slot budget. SIMD-0675 groups nearby validators in the leader schedule, and the tradeoff is how much locality to add before resilience suffers.",
     href: "https://x.com/0xrahulk/status/2116505465689625015",
@@ -164,7 +172,6 @@ export const essays: Essay[] = [
     href: "https://medium.com/@rkmonarch/solana-is-about-to-make-inefficient-transactions-expensive-1e994ae319a1",
     date: "August 2026",
     source: "Medium",
-    featured: true,
   },
   {
     title: "AI Doesn't Have a Model Problem Anymore. It Has a Systems Problem.",
